@@ -1,0 +1,268 @@
+.shopScreen__gameSectionBack {
+  padding: 30px 0;
+  background-color: #272E3B;
+}
+
+.shopScreen__games {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: start ease-in-out 1s;
+
+  &-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+  }
+
+  &-select {
+    user-select: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid #3D4554;
+    position: relative;
+    overflow: hidden;
+
+
+    &_dota {
+      display: flex;
+      align-items: center;
+      padding: 5px 15px;
+      cursor: pointer;
+
+      h2 {
+        color: #FFFFFF;
+      }
+    }
+
+    &_csgo {
+      display: flex;
+      align-items: center;
+      padding: 5px 15px;
+      cursor: pointer;
+
+      h2 {
+        color: #FFFFFF;
+      }
+    }
+
+    &_selector {
+      transition: 0.5s;
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      border: 2px solid #F4C038;
+
+
+      left: 0;
+      background: rgba(239, 188, 58, 0.1);
+      border-radius: 30px 0 0 30px;
+    }
+
+    .selectorActive {
+      transition: 0.5s;
+      right: 0;
+      left: 50%;
+      background: rgba(239, 188, 58, 0.1);
+      border-radius: 0 30px 30px 0;
+    }
+  }
+}
+
+
+.shopScreen__items {
+  background-color: #20222A;
+
+
+  &-searchAndTitle {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: start ease-in-out 1s;
+  }
+
+  &-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    animation: start ease-in-out 1s;
+  }
+
+  &-search {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    border: 1px solid #3D4554;
+    box-sizing: border-box;
+    border-radius: 24px;
+    padding: 5px 10px;
+    animation: start ease-in-out 1s;
+
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: #FFFFFF;
+      font-size: 16px;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+    }
+  }
+
+  &-rareOfItems {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+
+    &-title {
+      color: #FFFFFF;
+      animation: start ease-in-out 1s;
+    }
+  }
+
+  &-checkbox {
+    position: relative;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    animation: start ease-in-out 1s;
+  }
+
+  &-checkbox:before {
+    opacity: 0;
+    content: '✓';
+    transition: 0.4s;
+  }
+
+  &-checkbox:checked::before {
+    opacity: 100%;
+    transition: 0.4s;
+  }
+}
+
+
+.legend {
+  color: #bd00ed;
+  border: 1px solid #bd00ed;
+}
+
+.megaRare {
+  color: #F4C038;
+  border: 1px solid #F4C038;
+}
+
+.rare {
+  color: #275CE4;
+  border: 1px solid #275CE4;
+}
+
+.raree {
+  color: #6AB2F4;
+  border: 1px solid #6AB2F4;
+}
+
+.default {
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+
+.flex_for-checkboxes {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-left: 10px;
+}
+
+.itemsSection {
+  background-color: #20222A;
+  padding: 30px 0;
+}
+
+.reloadButton {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  cursor: pointer;
+  animation: start ease-in-out 1s;
+  user-select: none;
+
+  h3 {
+    color: #FFFFFF;
+  }
+
+  img {
+    height: 100%;
+    transition: 0.5s;
+  }
+}
+
+.reloadArrows{
+  transition: 0.3s;
+  transform: rotate(360deg);
+}
+.rotate{
+  transition: 0.3s;
+  transform: rotate(-360deg);
+}
+
+.rowForItems {
+  padding: 30px 0;
+  display: flex;
+  column-gap: 10px;
+  row-gap: 10px;
+  flex-flow: row wrap;
+  justify-content: center;
+  min-height: 50vh;
+  transition: 0.4s;
+
+  .shopCard {
+    width: 200px;
+    height: 180px;
+    text-align: center;
+    padding: 10px 0;
+    user-select: none;
+    transition: 0.5s;
+    animation: ease-in-out 1s start;
+    img {
+      width: 120px;
+    }
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .itemPrice {
+      margin-top: 10px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

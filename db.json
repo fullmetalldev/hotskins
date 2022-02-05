@@ -1,0 +1,195 @@
+{
+  "csgo": [
+    {
+      "name": "Howl",
+      "gun": "M4A4",
+      "rare": 1,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszFJTwT09S5g4yCmfDLPr7Vn35c18lwmO7Eu9-s0AXs-RBkZmCmIoCQcQU3aVuCrFfrwee-gsO77s6bn3Bg6SF3t3bD30vgkAZ9U90/192x192",
+      "price": 2465,
+      "checked": false,
+      "id": 1
+    },
+    {
+      "name": "Dragon Lore",
+      "gun": "AWP",
+      "rare": 2,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17P7NdTRH-t26q4SZlvD7PYTQgXtu5cB1g_zMyoD0mlOx5UM5ZWClcYCUdgU3Z1rQ_FK-xezngZO46MzOziQ1vSMmtCmIyxfkgx5SLrs4SgJFJKs/192x192",
+      "price": 980,
+      "checked": false,
+      "id": 2
+    },
+    {
+      "name": "Gold Arabsque",
+      "gun": "AK47",
+      "rare": 2,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18l4jeHVyoD0mlOx5UM4YjvzdoTHJFVvNw3YrlO_xebsgpa7u57Pzidk7nQm53zUmx21g01SLrs4iSV9vgU/192x192",
+      "price": 798,
+      "checked": false,
+      "id": 3
+    },
+    {
+      "name": "Welcome To The Jungle",
+      "gun": "M4A1-S",
+      "rare": 2,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alDKjfl2BU18h0juDU-LP5iUazrl1vajqncdeRclA3N1DY81K4ku7sgpO7v86dwHpk7yZ3tnmLzRG1ghAYcKUx0svhgNwv/192x192",
+      "price": 999,
+      "checked": false,
+      "id": 4
+    },
+    {
+      "name": "Desert Hydra",
+      "gun": "AWP",
+      "rare": 2,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FABz7PLfYQJK9diklb-GkvP9JrbummpD78A_3rCRrNTx2Ve3rUU4Nm_1LNOSJwU_aFHR_FfowOjv15C46J_NznRgvj5iuyjUugxsBg/192x192/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alDKjfl2BU18h0juDU-LP5iUazrl1vajqncdeRclA3N1DY81K4ku7sgpO7v86dwHpk7yZ3tnmLzRG1ghAYcKUx0svhgNwv/192x192",
+      "price": 789,
+      "checked": false,
+      "id": 5
+    },
+    {
+      "name": "X-Ray",
+      "gun": "AK47",
+      "rare": 2,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJegJa_t2vq4yCkP_gDLfQhGxUpsQg3LuQoI733APlrxI_azqgJoOSIQc9NQqD-lLrw-rqhJLtu8vJyHp9-n51JfbHn_c/192x192",
+      "price": 845,
+      "checked": false,
+      "id": 6
+    },
+    {
+      "name": "Mjolnir",
+      "gun": "Negev",
+      "rare": 1,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpouL-iLhFf1OD3fzhF6cqJgIiEhcj4OrzZglRd6dd2j6eUpdqliQO18kJvMWj0JYDDI1A5NFDRr1C6xLrpgMO87pnJwXMxuCB0-z-DyJcgKI6K/192x192",
+      "price": 2253,
+      "checked": false,
+      "id": 7
+    },
+    {
+      "name": "Poseidon",
+      "gun": "M4A4",
+      "rare": 1,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszYfi5H5di5mr-HnvD8J4Tdl3lW7YsijuuUo9StiQG2_0Q-N2z0JobAdQU2ZQmCrFC9kurqh5W97Z6amnJgpGB8sqTzmbCH/192x192",
+      "price": 1215,
+      "checked": false,
+      "id": 8
+    },
+    {
+      "name": "Fade",
+      "gun": "Glock-18",
+      "rare": 1,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0vL3dzxG6eO6nYeDg8j4MqnWkyUHucB1ieqXrIrz2gHmr0ZvZDj3cNKUdlQ-YF6DqAS2w-i8h5Dt6Zib1zI97Ycw1ud8/192x192",
+      "price": 1670,
+      "checked": false,
+      "id": 9
+    },
+    {
+      "name": "Kill Confirmed",
+      "gun": "USP-S",
+      "rare": 2,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8j_OrfdqWhe5sN4mOTE8bP5gVO8vywwMiukcZjEcVc5M1CG-1jtyLi9jJW97pzBmnM27nQlsSvfnkGzhU1OPeY8h6CeVxzAUEsa6pHf/192x192",
+      "price": 845,
+      "checked": false,
+      "id": 10
+    },
+    {
+      "name": "Fuel Injector",
+      "gun": "AK47",
+      "rare": 2,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08-jhIWZlP_1IbzUklRd4cJ5ntbN9J7yjRrsqkM4ZmqmLILHdQY6aFvW_AC9lO2718S-ucnLwCRnvSN24nmJzEDln1gSOcGSLCO2/192x192",
+      "price": 845,
+      "checked": false,
+      "id": 11
+    },
+    {
+      "name": "Akihabara Accept",
+      "gun": "AUG",
+      "rare": 1,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLGeDBH092jk7-GkvP9JrbummpD78A_2r2VoNmk31Gw8xVsYGHzddLEJgU9MljW_wLsl-_ngJ-1tJTKm3Jluz5iuygVG_WEBA/192x192",
+      "price": 2132,
+      "checked": false,
+      "id": 12
+    },
+    {
+      "name": "Fire Serpent",
+      "gun": "AK47",
+      "rare": 3,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teTE8YXghWu4qgE7NnfzdtCTIQM-ZFnWqFLqyb270ZHt6MyanHMxvHYitHzVzBHk1RtOarc8m7XAHlYw1xU4/192x192",
+      "price": 456,
+      "checked": false,
+      "id": 13
+    },
+    {
+      "name": "Printstream",
+      "gun": "M4A1-S",
+      "rare": 3,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITBhGJf_NZlmOzA-LP5gVO8vywwMiukcZice1M9ZViD-ATrle7v15O46cifzHFhunZ243yInxW-10sZOrBp1qTLVxzAUNxEoFAP/192x192",
+      "price": 550,
+      "checked": false,
+      "id": 14
+    },
+    {
+      "name": "Crimson We",
+      "gun": "CZ75-Auto",
+      "rare": 3,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf2-r3ZjhA_-O6nYeDg8j4MqnWkyUDuJwiiL2S9InziQzmrhZqZGjwd4KScAU2ZQ2B-Fm9l7q7gZLqvJ_K1zI97dfjTfNR/192x192",
+      "price": 367,
+      "checked": false,
+      "id": 15
+    },
+    {
+      "name": "Yellow Jacket",
+      "gun": "CZ75-Auto",
+      "rare": 1,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf0Ob3cicVud2Jl4iKhOP9Kb7DqWZU7Mxkh9bN9J7yjRrmqUo6ZDrzLNDHdwVqMgrX-lC6lb-9gJ_v6J7Kn3dq7yl2s3iIykSyn1gSOaH4Qw9b/192x192",
+      "price": 1764,
+      "checked": false,
+      "id": 16
+    },
+    {
+      "name": "Victoria",
+      "gun": "CZ75-Auto",
+      "rare": 3,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf0uL3dClB5Nmyq4ORwKLLPr7Vn35c18lwmO7Eu9um2VK2-kQ5NmqhJY6cJ1BoM1DXqVa4xujujMe76ZjLyndnuHMi4C7D30vgyemH9p8/192x192",
+      "price": 433,
+      "checked": false,
+      "id": 17
+    }
+  ],
+  "dota2": [
+    {
+      "name": "Alpine Stalker's Scarf",
+      "gun": "URSA",
+      "rare": 4,
+      "url": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUnuwhcA1_TRvar6M7fQ1R6IEpVt-n3elE51aeYc2gXvNiyxYXSwKKjZeuHxDgDscR12rDEpYn2i1Hg5QMyNOGXgs9d",
+      "price": 239,
+      "checked": false,
+      "id": 1
+    },
+    {
+      "name": "Mark of the Blood Moon",
+      "gun": "Lycan",
+      "rare": 2,
+      "url": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffi1cPcXFlLKAtYuIWtPgl01uH3fTJD6NW4k7-YlOXxNrWflGhV6ZQg2bGQ9Nr3jgyy-hJrN2mmcoKSdA5sYlyF-Fa7xrvt05_o6YOJlyUVOZbW9Q",
+      "price": 670,
+      "checked": false,
+      "id": 2
+    },
+    {
+      "name": "Exalted Fractal Horns of Inner Abysm",
+      "gun": "Terrorblade",
+      "rare": 2,
+      "url": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXL5B5QK5l9vR5PXkPCReis08qcUk93JApWia6gORVvwfHEcDlHoorjltbdz6WmauyAxD9XuZIh0rjC9tSl2Qe2-hBrNWuhJtPAdA5tZlHOug_phx4qQGw/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffi1cPcXFlLKAtYuIWtPgl01uH3fTJD6NW4k7-YlOXxNrWflGhV6ZQg2bGQ9Nr3jgyy-hJrN2mmcoKSdA5sYlyF-Fa7xrvt05_o6YOJlyUVOZbW9Q",
+      "price": 540,
+      "checked": false,
+      "id": 3
+    },
+    {
+      "name": "Suit of the Darkbrew Enforcer",
+      "gun": "Alchemist",
+      "rare": 4,
+      "url": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUzpRhVSUHZVPDixMLcXEl8GgdFv7esJQZs7PLafDJQo8-7m4-fn8j3IbLcn2VQ5PpwmOTO58Kh3QfjqRI5ZD_ycYSTe1M8NQyBqALvl-_v1pG-vp_Iy3U3snYhtizVgVXp1nTc6cDY",
+      "price": 299,
+      "checked": false,
+      "id": 4
+    }
+  ]
+}

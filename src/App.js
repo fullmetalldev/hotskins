@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Header from "./Components/Header/Header";
+import {Routes, Route} from "react-router-dom";
+import "./style.css";
+import Footer from "./Components/Footer/Footer";
+import StartScreen from "./Components/StartScreen/StartScreen";
+import NotFound from "./Components/NotFound/NotFound";
+import ShopScreen from "./Components/ShopScreen/ShopScreen";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [language, setLanguage] = useState('ru');
+
+    return (
+        <div className="App">
+            <Header language={language} setLanguage={setLanguage}/>
+            <Routes>
+                <Route path="/" element={<StartScreen language={language}/>}/>
+                <Route path="/shop" element={<ShopScreen language={language}/>}/>
+                <Route path="/*" element={<NotFound language={language}/>}/>
+            </Routes>
+            <Footer language={language}/>
+        </div>
+    );
 }
 
 export default App;

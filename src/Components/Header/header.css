@@ -1,0 +1,71 @@
+.header {
+  background: #20222A;
+  width: 100%;
+  padding: 16px 0;
+}
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__navbar-right {
+  display: flex;
+  align-items: center;
+  column-gap: 140px;
+}
+.header__navbar-logo {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  animation: start ease-in-out 1s;
+}
+.header__navbar-logo h2 {
+  color: #ffffff;
+  font-weight: bolder;
+}
+.header__navbar-logo h2 span {
+  font-weight: lighter;
+}
+.header__navbar-ul {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+  animation: start ease-in-out 1s;
+}
+.header__navbar-ul_li {
+  color: #ffffff;
+  font-weight: bold;
+}
+.header__navbar-left {
+  display: flex;
+  align-items: center;
+}
+.header__navbar-left .selectLanguage {
+  display: flex;
+  align-items: center;
+  border-radius: 18px;
+  padding: 8px 10px;
+  background-color: transparent;
+  border: 1px solid #3D4554;
+  animation: start ease-in-out 1s;
+}
+.header__navbar-left .selectLanguage img {
+  width: 15px;
+}
+.header__navbar-left .selectLanguage select {
+  background-color: transparent;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+}
+.header__navbar-left .selectLanguage option {
+  background-color: #20222A;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,50 @@
+.startScreen {
+  height: 90vh;
+  padding: 180px 0 0;
+  background: url("mainBack.png") center/cover;
+  position: relative;
+}
+.startScreen .container {
+  animation: startScreenStart ease-in-out 1s;
+}
+.startScreen__row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 30px;
+}
+.startScreen__row-title {
+  width: 700px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+.startScreen__row-btn {
+  padding: 22px 40px;
+  background: #F4C038;
+  border-radius: 48px;
+  border: none;
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #20222A;
+  cursor: pointer;
+}
+
+@keyframes startScreenStart {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  100% {
+    left: 0;
+    position: relative;
+  }
+}
+
+/*# sourceMappingURL=startscreen.css.map */

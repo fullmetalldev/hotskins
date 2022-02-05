@@ -1,0 +1,82 @@
+.header {
+  background: #20222A;
+  width: 100%;
+  padding: 16px 0;
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-right {
+      display: flex;
+      align-items: center;
+      column-gap: 140px;
+    }
+
+    &-logo {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      animation: start ease-in-out 1s;
+
+      h2 {
+        color: #ffffff;
+        font-weight: bolder;
+
+        span {
+          font-weight: lighter;
+        }
+      }
+    }
+
+    &-ul {
+      display: flex;
+      align-items: center;
+      column-gap: 32px;
+      animation: start ease-in-out 1s;
+
+      &_li {
+        color: #ffffff;
+        font-weight: bold;
+      }
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+
+
+      .selectLanguage {
+        display: flex;
+        align-items: center;
+        border-radius: 18px;
+        padding: 8px 10px;
+        background-color: transparent;
+        border: 1px solid #3D4554;
+        animation: start ease-in-out 1s;
+
+        img {
+          width: 15px;
+        }
+
+        select {
+          background-color: transparent;
+          border: none;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: #ffffff;
+          outline: none;
+          cursor: pointer;
+        }
+
+        option {
+          background-color: #20222A;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
