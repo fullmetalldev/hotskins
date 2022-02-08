@@ -209,7 +209,7 @@
   row-gap: 10px;
   flex-flow: row wrap;
   justify-content: center;
-  min-height: 50vh;
+  min-height: calc(100vh - 452px);
   transition: 0.4s;
 }
 .rowForItems .shopCard {
