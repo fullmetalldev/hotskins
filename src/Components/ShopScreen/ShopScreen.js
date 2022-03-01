@@ -6,12 +6,11 @@ import axios from "axios";
 import searchPNG from "./search.png";
 import refreshPNG from "./refresh.png";
 
-const ShopScreen = ({language}) => {
+const ShopScreen = ({language, cart, setCart}) => {
 
     const [game, setGame] = useState(localStorage.getItem('game'));
-    const [Items, setItems] = useState([]);
+    const [cards, setCards] = useState([]);
     const [search, setSearch] = useState('');
-    const [filter, setFilter] = useState('');
 
 
     useEffect(() => {
@@ -21,56 +20,68 @@ const ShopScreen = ({language}) => {
 
     const loadItems = () => {
         axios(`http://localhost:8080/${game}`)
-            .then(({data}) => setItems(data));
+            .then(({data}) => setCards(data));
     };
 
-    const rel = ()=>{
+    const rel = () => {
+        document.querySelector('.rowForItems').style.display = 'none';
         axios(`http://localhost:8080/${game}`)
-            .then(({data}) => setItems(data));
-        document.querySelectorAll('.shopCard').forEach((item)=>{
-            item.style.display = 'none'
-        });
+            .then(({data}) => setCards(data));
+        setTimeout(() => {
+            document.querySelector('.rowForItems').style.display = 'flex';
+        }, 100);
+
+
         document.querySelector('.reloadArrows').classList.toggle('rotate');
-        setTimeout(()=>{
-            document.querySelectorAll('.shopCard').forEach((item)=>{
-                item.style.display = 'flex'
-            });
+        setTimeout(() => {
+
             document.querySelector('.reloadArrows').classList.toggle('rotate');
         }, 300);
     };
 
-    if (filter !== ''){
-        document.querySelectorAll('.shopCard').forEach((item)=>{
-            if (item.dataset.filter === filter){
-                item.style.display = 'flex';
-            } else {
-                item.style.display = 'none'
-            }
-        })
-    } else {
-        document.querySelectorAll('.shopCard').forEach((item)=>{
-            item.style.display = 'flex'
-        })
-    }
 
     const setCSGO = () => {
         setGame('csgo');
+        let cards = document.querySelectorAll(".shopCard");
+        cards.forEach((card) => {
+            card.style.display = 'flex'
+        });
         localStorage.setItem('game', 'csgo');
         axios(`http://localhost:8080/csgo`)
-            .then(({data}) => setItems(data));
+            .then(({data}) => setCards(data));
+        document.querySelectorAll('.shopScreen__items-checkbox').forEach((item) => {
+            item.checked = false
+        })
     };
 
     const setDota = () => {
         setGame('dota2');
+        let cards = document.querySelectorAll(".shopCard");
+        cards.forEach((card) => {
+            card.style.display = 'flex'
+        });
         localStorage.setItem('game', 'dota2');
         axios(`http://localhost:8080/dota2`)
-            .then(({data}) => setItems(data));
+            .then(({data}) => setCards(data));
+        document.querySelectorAll('.shopScreen__items-checkbox').forEach((item) => {
+            item.checked = false
+        })
 
     };
 
-    const removeFilter = (e)=>{
+    const setRare = (e) => {
+        let cards = document.querySelectorAll(".shopCard");
+        cards.forEach((card) => {
+            card.dataset.filter === e ? card.style.display = 'flex' : card.style.display = "none"
+        })
+    };
+
+    const unsetRare = (e) => {
         e.target.checked = false;
-        setFilter('');
+        let cards = document.querySelectorAll(".shopCard");
+        cards.forEach((card) => {
+            card.style.display = 'flex'
+        })
 
     };
 
@@ -119,17 +130,25 @@ const ShopScreen = ({language}) => {
                             <h2 className="shopScreen__items-rareOfItems-title">
                                 {language === 'ru' ? 'Редкость' : "Rare"}
                             </h2>
-                            <input onDoubleClick={(e)=> (filter === e.target.dataset.filter ? removeFilter(e) : "")} data-filter='legend'
-                                   onChange={(e)=> !e.checked ? setFilter(e.target.dataset.filter) : ""}
-                                className="shopScreen__items-checkbox legend" name="rare" type="radio"/>
-                            <input onDoubleClick={(e)=> (filter === e.target.dataset.filter ? removeFilter(e) : "")} data-filter='megaRare' onChange={(e)=> !e.checked ? setFilter(e.target.dataset.filter) : ""}
-                                className="shopScreen__items-checkbox megaRare" name="rare" type="radio"/>
-                            <input onDoubleClick={(e)=> (filter === e.target.dataset.filter ? removeFilter(e) : "")} data-filter='rare' onChange={(e)=> !e.checked ? setFilter(e.target.dataset.filter) : ""}
-                                className="shopScreen__items-checkbox rare" name="rare" type="radio"/>
-                            <input onDoubleClick={(e)=> (filter === e.target.dataset.filter ? removeFilter(e) : "")} data-filter='raree' onChange={(e)=> !e.checked ? setFilter(e.target.dataset.filter) : ""}
-                                className="shopScreen__items-checkbox raree" name="rare" type="radio"/>
-                            <input onDoubleClick={(e)=> (filter === e.target.dataset.filter ? removeFilter(e) : "")} data-filter='default' onChange={(e)=> !e.checked ? setFilter(e.target.dataset.filter) : ""}
-                                className="shopScreen__items-checkbox default" name="rare" type="radio"/>
+                            <input onDoubleClick={(e) => unsetRare(e)} data-filter='legend'
+                                   onChange={(e) => setRare(e.target.dataset.filter)}
+                                   className="shopScreen__items-checkbox legend" name="rare" type="radio"/>
+                            <input onDoubleClick={(e) => unsetRare(e)}
+                                   onChange={(e) => setRare(e.target.dataset.filter)} data-filter='megaRare'
+                                   className="shopScreen__items-checkbox megaRare" name="rare"
+                                   type="radio"/>
+                            <input onDoubleClick={(e) => unsetRare(e)}
+                                   onChange={(e) => setRare(e.target.dataset.filter)} data-filter='rare'
+                                   className="shopScreen__items-checkbox rare" name="rare"
+                                   type="radio"/>
+                            <input onDoubleClick={(e) => unsetRare(e)}
+                                   onChange={(e) => setRare(e.target.dataset.filter)} data-filter='raree'
+                                   className="shopScreen__items-checkbox raree" name="rare"
+                                   type="radio"/>
+                            <input onDoubleClick={(e) => unsetRare(e)}
+                                   onChange={(e) => setRare(e.target.dataset.filter)} data-filter='default'
+                                   className="shopScreen__items-checkbox default" name="rare"
+                                   type="radio"/>
                         </div>
 
                         <div className="reloadButton">
@@ -151,24 +170,22 @@ const ShopScreen = ({language}) => {
 
                     <div className="rowForItems">
 
-                        {search === '' ? Items.map((item) => (
-                                <div data-filter={item.rare === 1 ? "legend" : item.rare === 2 ? "megaRare" : item.rare === 3 ? "rare" : item.rare === 4 ? "raree" : item.rare === 5 ? "default" : ""} data-name={`${item.gun} ${item.name}`.toLowerCase()} key={item.id}
-                                     data-price={item.price}
-                                     className={item.rare === 1 ? "shopCard legend" : item.rare === 2 ? "shopCard megaRare" : item.rare === 3 ? "shopCard rare" : item.rare === 4 ? "shopCard raree" : item.rare === 5 ? "shopCard default" : ""}>
-                                    <img src={item.url} alt={item.name}/>
-                                    <h4>{item.gun} |</h4>
-                                    <h4>{item.name}</h4>
-                                    <h4 className="itemPrice">{item.price + " сом"}</h4>
-                                </div>
-                            ))
-                            : Items.map((item) => (
+                        {
+
+                            cards.filter((item) => item.name.toLowerCase() + item.gun.toLowerCase().includes(search.toLowerCase())).map((item) => (
                                 `${item.gun} ${item.name}`.toLowerCase().includes(search.toLowerCase()) ?
-                                    <div data-filter={item.rare === 1 ? "legend" : item.rare === 2 ? "megaRare" : item.rare === 3 ? "rare" : item.rare === 4 ? "raree" : item.rare === 5 ? "default" : ""} data-name={`${item.gun} ${item.name}`.toLowerCase()} key={item.id}
+                                    <div style={{border: item.checked ? "white 1px solid" : "", backgroundColor: item.checked ? "#272E3B" : ""}} onClick={() => {
+                                        item.checked = !item.checked;
+                                        setCart(!cart.includes(item) ? [...cart, item] : [...cart])
+                                    }}
+                                         data-filter={item.rare === 1 ? "legend" : item.rare === 2 ? "megaRare" : item.rare === 3 ? "rare" : item.rare === 4 ? "raree" : item.rare === 5 ? "default" : ""}
+                                         data-name={`${item.gun} ${item.name}`.toLowerCase()} key={item.id}
                                          data-price={item.price}
-                                         className={item.rare === 1 ? "shopCard legend" : item.rare === 2 ? "shopCard megaRare" : item.rare === 3 ? "shopCard rare" : item.rare === 4 ? "shopCard raree" : item.rare === 5 ? "shopCard default" : ""}>
+                                         className={item.rare === 1 ? "shopCard legend" : item.rare === 2 ? "shopCard megaRare" : item.rare === 3 ? "shopCard rare" : item.rare === 4 ? "shopCard raree" : item.rare === 5 ? "shopCard default" : ""
+                                         }>
+                                        <span className="shopCard__take" style={{display: item.checked ? "flex" : "none"}}>✔</span>
                                         <img src={item.url} alt={item.name}/>
-                                        <h4>{item.gun} |</h4>
-                                        <h4>{item.name}</h4>
+                                        <h4>{item.gun} |<br/> {item.name}</h4>
                                         <h4 className="itemPrice">{item.price + " сом"}</h4>
                                     </div>
                                     : ""

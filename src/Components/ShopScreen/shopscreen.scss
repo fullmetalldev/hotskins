@@ -197,6 +197,7 @@
 .itemsSection {
   background-color: #20222A;
   padding: 30px 0;
+  min-height: calc(100vh - 452px);
 }
 
 .reloadButton {
@@ -217,11 +218,12 @@
   }
 }
 
-.reloadArrows{
+.reloadArrows {
   transition: 0.3s;
   transform: rotate(360deg);
 }
-.rotate{
+
+.rotate {
   transition: 0.3s;
   transform: rotate(-360deg);
 }
@@ -233,24 +235,37 @@
   row-gap: 10px;
   flex-flow: row wrap;
   justify-content: center;
-  min-height: calc(100vh - 452px);
   transition: 0.4s;
+  animation: start linear 1s;
 
   .shopCard {
+    cursor: pointer;
     width: 200px;
     height: 180px;
     text-align: center;
     padding: 10px 0;
     user-select: none;
     transition: 0.5s;
+    position: relative;
     animation: ease-in-out 1s start;
+
+    &__take {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      color: #FFFFFF;
+      font-size: 24px;
+    }
+
     img {
       width: 120px;
     }
+
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .itemPrice {
       margin-top: 10px;
       color: #FFFFFF;

@@ -33,6 +33,9 @@ const Header = ({language, setLanguage}) => {
                             <a className="header__navbar-ul_li">
                                 {language === 'ru' ? "Контакты" : "Contacts"}
                             </a>
+                            <a className="header__navbar-ul_li">
+                                {language === 'ru' ? "Кейсы" : "Cases"}
+                            </a>
                         </div>
 
                     </div>

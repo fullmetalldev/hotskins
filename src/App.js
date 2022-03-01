@@ -11,13 +11,14 @@ import ShopScreen from "./Components/ShopScreen/ShopScreen";
 function App() {
 
     const [language, setLanguage] = useState('ru');
+    const [cart, setCart] = useState([]);
 
     return (
         <div className="App">
             <Header language={language} setLanguage={setLanguage}/>
             <Routes>
                 <Route path="/" element={<StartScreen language={language}/>}/>
-                <Route path="/shop" element={<ShopScreen language={language}/>}/>
+                <Route path="/shop" element={<ShopScreen cart={cart} setCart={setCart} language={language}/>}/>
                 <Route path="/*" element={<NotFound language={language}/>}/>
             </Routes>
             <Footer language={language}/>
