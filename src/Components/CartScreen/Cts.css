@@ -1,0 +1,126 @@
+.cartScreen {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  animation: linear 0.3s startCart;
+  transition: 0.3s;
+  background-color: #F4C038;
+  padding: 10px;
+  border-top: 1px solid #ffffff;
+}
+.cartScreen__arrow {
+  position: absolute;
+  top: -100px;
+  left: 50px;
+  transform: rotate(180deg);
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartScreen__arrow svg {
+  width: 50px;
+  height: 50px;
+}
+.cartScreen__arrow:hover {
+  background-color: #F4C038;
+  transition: 0.3s;
+}
+.cartScreen .down {
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+.cartScreen__itemsRow {
+  display: flex;
+  row-gap: 10px;
+  column-gap: 10px;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 200px;
+  flex-flow: wrap row;
+  transition: 0.3s;
+  animation: linear 0.3s cartRowStart;
+}
+.cartScreen__itemsRow .shopCard {
+  cursor: pointer;
+  width: calc(20% - 8px);
+  height: 150px;
+  text-align: center;
+  padding: 10px 0;
+  user-select: none;
+  transition: 0.5s;
+  position: relative;
+  animation: ease-in-out 1s start;
+  background-color: #272E3B;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cartScreen__itemsRow .shopCard img {
+  width: 80px;
+}
+.cartScreen__itemsRow .shopCard h4 {
+  font-size: 14px;
+}
+.cartScreen__itemsRow .shopCard .itemPrice {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #FFFFFF;
+}
+
+.hide {
+  height: 0;
+  transition: 0.3s;
+  animation: toHide 0.3s linear;
+}
+
+.CartHide {
+  height: 0;
+  border: none;
+  padding: 0;
+  animation: linear 0.3s hidingCart;
+}
+
+@keyframes hidingCart {
+  0% {
+    padding: 10px;
+    height: 200px;
+  }
+  100% {
+    padding: 0;
+    height: 0;
+  }
+}
+@keyframes toHide {
+  0% {
+    height: 200px;
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes cartRowStart {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 200px;
+  }
+}
+@keyframes startCart {
+  0% {
+    bottom: -200px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=Cts.css.map */

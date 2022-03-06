@@ -153,43 +153,5 @@
       "checked": false,
       "id": 17
     }
-  ],
-  "dota2": [
-    {
-      "name": "Alpine Stalker's Scarf",
-      "gun": "URSA",
-      "rare": 4,
-      "url": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUnuwhcA1_TRvar6M7fQ1R6IEpVt-n3elE51aeYc2gXvNiyxYXSwKKjZeuHxDgDscR12rDEpYn2i1Hg5QMyNOGXgs9d",
-      "price": 239,
-      "checked": false,
-      "id": 1
-    },
-    {
-      "name": "Mark of the Blood Moon",
-      "gun": "Lycan",
-      "rare": 2,
-      "url": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffi1cPcXFlLKAtYuIWtPgl01uH3fTJD6NW4k7-YlOXxNrWflGhV6ZQg2bGQ9Nr3jgyy-hJrN2mmcoKSdA5sYlyF-Fa7xrvt05_o6YOJlyUVOZbW9Q",
-      "price": 670,
-      "checked": false,
-      "id": 2
-    },
-    {
-      "name": "Exalted Fractal Horns of Inner Abysm",
-      "gun": "Terrorblade",
-      "rare": 2,
-      "url": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXL5B5QK5l9vR5PXkPCReis08qcUk93JApWia6gORVvwfHEcDlHoorjltbdz6WmauyAxD9XuZIh0rjC9tSl2Qe2-hBrNWuhJtPAdA5tZlHOug_phx4qQGw/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffi1cPcXFlLKAtYuIWtPgl01uH3fTJD6NW4k7-YlOXxNrWflGhV6ZQg2bGQ9Nr3jgyy-hJrN2mmcoKSdA5sYlyF-Fa7xrvt05_o6YOJlyUVOZbW9Q",
-      "price": 540,
-      "checked": false,
-      "id": 3
-    },
-    {
-      "name": "Suit of the Darkbrew Enforcer",
-      "gun": "Alchemist",
-      "rare": 4,
-      "url": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUzpRhVSUHZVPDixMLcXEl8GgdFv7esJQZs7PLafDJQo8-7m4-fn8j3IbLcn2VQ5PpwmOTO58Kh3QfjqRI5ZD_ycYSTe1M8NQyBqALvl-_v1pG-vp_Iy3U3snYhtizVgVXp1nTc6cDY",
-      "price": 299,
-      "checked": false,
-      "id": 4
-    }
   ]
 }
