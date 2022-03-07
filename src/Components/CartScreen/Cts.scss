@@ -3,11 +3,12 @@
   bottom: 0;
   left: 0;
   width: 100vw;
-  animation: linear 0.3s startCart;
+  animation: linear 0.5s startCart;
   transition: 0.3s;
   background-color: #F4C038;
   padding: 10px;
   border-top: 1px solid #ffffff;
+  border-radius: 20px 20px 0 0;
   &__arrow{
     position: absolute;
     top: -100px;
@@ -35,17 +36,21 @@
     transform: rotate(0deg);
     transition: 0.3s;
   }
+  &__itemsRow::-webkit-scrollbar {
+    width: 0;
+  }
   &__itemsRow{
     display: flex;
     row-gap: 10px;
     column-gap: 10px;
-    padding: 10px;
     overflow-x: hidden;
     overflow-y: scroll;
     height: 200px;
     flex-flow: wrap row;
     transition: 0.3s;
-    animation: linear 0.3s cartRowStart;
+    animation: linear 0.5s cartRowStart;
+
+
     .shopCard {
       cursor: pointer;
       width: calc(20% - 8px);
@@ -58,8 +63,10 @@
       animation: ease-in-out 1s start;
       background-color: #272E3B;
 
+
       img {
         width: 80px;
+        animation: linear 5s rotateImg infinite;
       }
 
       border-radius: 10px;

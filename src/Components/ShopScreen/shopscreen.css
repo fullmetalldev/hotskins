@@ -232,7 +232,7 @@
   position: absolute;
   right: 20px;
   top: 0;
-  color: #FFFFFF;
+  color: #F4C038;
   font-size: 24px;
 }
 .rowForItems .shopCard img {
@@ -243,6 +243,14 @@
   color: #FFFFFF;
 }
 
+@keyframes rotateImg {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 180, 0, 360deg);
+  }
+}
 @keyframes start {
   0% {
     opacity: 0;

@@ -8,6 +8,22 @@
   align-items: center;
   justify-content: space-between;
 }
+.header__navbar_cart {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header__navbar_cart-number {
+  left: 40px;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+}
+.header__navbar_cart-svg {
+  width: 30px;
+  height: 30px;
+}
 .header__navbar-right {
   display: flex;
   align-items: center;
@@ -39,6 +55,7 @@
 .header__navbar-left {
   display: flex;
   align-items: center;
+  column-gap: 10px;
 }
 .header__navbar-left .selectLanguage {
   display: flex;

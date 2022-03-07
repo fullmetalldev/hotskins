@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import "./Cts.css"
 
-const CartScreen = ({cart}) => {
+const CartScreen = ({csgoCards, setCsgoCards, cart, setCart}) => {
 
     const [cartState, setCartState] = useState(false);
 
@@ -22,7 +22,11 @@ const CartScreen = ({cart}) => {
                 <div className={cartState ? "cartScreen__itemsRow hide" : "cartScreen__itemsRow"}>
 
                     {cart.map((item) =>
-                        <div
+                        <div onClick={()=> {
+                            setCart(cart.filter((el)=> item.id !== el.id));
+                            (csgoCards.map((element)=> element.id === item.id ? element.checked = !element.checked : ""));
+                            localStorage.setItem("cards", csgoCards)
+                        }}
                             data-name={`${item.gun} ${item.name}`.toLowerCase()} key={item.id}
                             data-price={item.price}
                             className={item.rare === 1 ? "shopCard legend" : item.rare === 2 ? "shopCard megaRare" : item.rare === 3 ? "shopCard rare" : item.rare === 4 ? "shopCard raree" : item.rare === 5 ? "shopCard default" : ""}>

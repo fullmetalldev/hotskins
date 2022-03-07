@@ -5,18 +5,21 @@ import axios from "axios";
 import searchPNG from "./search.png";
 import refreshPNG from "./refresh.png";
 import CartScreen from "../CartScreen/CartScreen";
+import App from "../../App";
 
-const ShopScreen = ({language, cart, setCart}) => {
+const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
 
-    const [csgoCards, setCsgoCards] = useState([]);
+
     const [search, setSearch] = useState('');
 
 
     useEffect(() => {
-        axios(`http://localhost:8080/csgo`)
-            .then(({data}) => setCsgoCards(data));
-    }, []);
+        if (csgoCards.length === 0){
+            axios(` http://localhost:8080/csgo`)
+                .then(({data}) => setCsgoCards(data))
 
+        }
+    }, []);
 
     const rel = () => {
         document.querySelector('.rowForItems').style.display = 'none';
@@ -34,15 +37,14 @@ const ShopScreen = ({language, cart, setCart}) => {
 
     let cards = document.querySelectorAll('.shopCard');
 
-    useEffect(()=>{
-        if (rare.length !== 0){
-            cards.forEach((card)=>{
+    useEffect(() => {
+        if (rare.length !== 0) {
+            cards.forEach((card) => {
                 rare.includes(card.dataset.filter) ? card.style.display = "flex" : card.style.display = "none"
             })
-        }
-        else {
-            cards.forEach((card)=>{
-                card.style.display="flex"
+        } else {
+            cards.forEach((card) => {
+                card.style.display = "flex"
             })
         }
     }, [rare]);
@@ -86,22 +88,26 @@ const ShopScreen = ({language, cart, setCart}) => {
                                 {language === 'ru' ? 'Редкость' : "Rare"}
                             </h2>
                             <input data-filter='legend'
-                                   onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el)=> el !== e.target.dataset.filter))}
+                                   onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
                                    className="shopScreen__items-checkbox legend" name="rare" type="checkbox"/>
                             <input
-                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el)=> el !== e.target.dataset.filter))} data-filter='megaRare'
+                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                data-filter='megaRare'
                                 className="shopScreen__items-checkbox megaRare" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el)=> el !== e.target.dataset.filter))} data-filter='rare'
+                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                data-filter='rare'
                                 className="shopScreen__items-checkbox rare" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el)=> el !== e.target.dataset.filter))} data-filter='raree'
+                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                data-filter='raree'
                                 className="shopScreen__items-checkbox raree" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el)=> el !== e.target.dataset.filter))} data-filter='default'
+                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                data-filter='default'
                                 className="shopScreen__items-checkbox default" name="rare"
                                 type="checkbox"/>
                         </div>
@@ -130,11 +136,11 @@ const ShopScreen = ({language, cart, setCart}) => {
                             csgoCards.filter((item) => item.name.toLowerCase() + item.gun.toLowerCase().includes(search.toLowerCase())).map((item) => (
                                 `${item.gun} ${item.name}`.toLowerCase().includes(search.toLowerCase()) ?
                                     <div style={{
-                                        border: item.checked ? "white 1px solid" : "",
-                                        backgroundColor: item.checked ? "#272E3B" : ""
+                                        border: item.checked ? "#F4C038 1px solid" : "",
+                                        backgroundColor: item.checked ? "#F4C03830" : ""
                                     }} onClick={() => {
                                         item.checked = !item.checked;
-                                        setCart(!cart.includes(item) ? [...cart, item] : [...cart.filter((el)=>el!==item)])
+                                        setCart(!cart.includes(item) ? [...cart, item] : [...cart.filter((el) => el !== item)])
                                     }}
                                          data-filter={item.rare === 1 ? "legend" : item.rare === 2 ? "megaRare" : item.rare === 3 ? "rare" : item.rare === 4 ? "raree" : item.rare === 5 ? "default" : ""}
                                          data-name={`${item.gun} ${item.name}`.toLowerCase()} key={item.id}
@@ -157,7 +163,8 @@ const ShopScreen = ({language, cart, setCart}) => {
                 </div>
             </section>
 
-            {cart.length > 0 ? <CartScreen cart={cart}/> : ""}
+            {cart.length > 0 ?
+                <CartScreen setCsgoCards={setCsgoCards} csgoCards={csgoCards} cart={cart} setCart={setCart}/> : ""}
 
         </main>
     );

@@ -3,11 +3,12 @@
   bottom: 0;
   left: 0;
   width: 100vw;
-  animation: linear 0.3s startCart;
+  animation: linear 0.5s startCart;
   transition: 0.3s;
   background-color: #F4C038;
   padding: 10px;
   border-top: 1px solid #ffffff;
+  border-radius: 20px 20px 0 0;
 }
 .cartScreen__arrow {
   position: absolute;
@@ -35,17 +36,19 @@
   transform: rotate(0deg);
   transition: 0.3s;
 }
+.cartScreen__itemsRow::-webkit-scrollbar {
+  width: 0;
+}
 .cartScreen__itemsRow {
   display: flex;
   row-gap: 10px;
   column-gap: 10px;
-  padding: 10px;
   overflow-x: hidden;
   overflow-y: scroll;
   height: 200px;
   flex-flow: wrap row;
   transition: 0.3s;
-  animation: linear 0.3s cartRowStart;
+  animation: linear 0.5s cartRowStart;
 }
 .cartScreen__itemsRow .shopCard {
   cursor: pointer;
@@ -65,6 +68,7 @@
 }
 .cartScreen__itemsRow .shopCard img {
   width: 80px;
+  animation: linear 5s rotateImg infinite;
 }
 .cartScreen__itemsRow .shopCard h4 {
   font-size: 14px;

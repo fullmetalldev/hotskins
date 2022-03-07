@@ -8,6 +8,23 @@
     align-items: center;
     justify-content: space-between;
 
+    &_cart{
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &-number{
+        left: 40px;
+        font-size: 16px;
+        font-family: "Rubik", sans-serif;
+        color: #ffffff;
+      }
+      &-svg{
+        width: 30px;
+        height: 30px;
+      }
+    }
+
     &-right {
       display: flex;
       align-items: center;
@@ -45,6 +62,7 @@
     &-left {
       display: flex;
       align-items: center;
+      column-gap: 10px;
 
 
       .selectLanguage {

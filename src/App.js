@@ -12,13 +12,14 @@ function App() {
 
     const [language, setLanguage] = useState('ru');
     const [cart, setCart] = useState([]);
+    const [csgoCards, setCsgoCards] = useState([]);
 
     return (
         <div className="App">
-            <Header language={language} setLanguage={setLanguage}/>
+            <Header cart={cart} language={language} setLanguage={setLanguage}/>
             <Routes>
                 <Route path="/" element={<StartScreen language={language}/>}/>
-                <Route path="/shop" element={<ShopScreen cart={cart} setCart={setCart} language={language}/>}/>
+                <Route path="/shop" element={<ShopScreen csgoCards={csgoCards} setCsgoCards={setCsgoCards} cart={cart} setCart={setCart} language={language}/>}/>
                 <Route path="/*" element={<NotFound language={language}/>}/>
             </Routes>
             <Footer language={language}/>
