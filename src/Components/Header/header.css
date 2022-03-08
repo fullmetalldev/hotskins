@@ -2,6 +2,9 @@
   background: #20222A;
   width: 100%;
   padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 .header__navbar {
   display: flex;
@@ -13,6 +16,8 @@
   position: relative;
   display: flex;
   align-items: center;
+  column-gap: 5px;
+  transition: 0.3s;
 }
 .header__navbar_cart-number {
   left: 40px;
@@ -24,6 +29,12 @@
   width: 30px;
   height: 30px;
 }
+.header__navbar_cart:hover {
+  background-color: #ffffff30;
+  transition: 0.3s;
+  padding: 5px;
+  border-radius: 10px;
+}
 .header__navbar-right {
   display: flex;
   align-items: center;
@@ -34,6 +45,7 @@
   align-items: center;
   column-gap: 5px;
   animation: start ease-in-out 1s;
+  transition: 0.3s;
 }
 .header__navbar-logo h2 {
   color: #ffffff;
@@ -41,6 +53,11 @@
 }
 .header__navbar-logo h2 span {
   font-weight: lighter;
+}
+.header__navbar-logo:hover {
+  background-color: #ffffff30;
+  transition: 0.3s;
+  border-radius: 20px;
 }
 .header__navbar-ul {
   display: flex;
@@ -51,11 +68,21 @@
 .header__navbar-ul_li {
   color: #ffffff;
   font-weight: bold;
+  transition: 0.3s;
+}
+.header__navbar-ul_li:hover {
+  padding: 10px;
+  background-color: #ffffff30;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 .header__navbar-left {
   display: flex;
   align-items: center;
   column-gap: 10px;
+}
+.header__navbar-left-cartPrice {
+  color: #ffffff;
 }
 .header__navbar-left .selectLanguage {
   display: flex;

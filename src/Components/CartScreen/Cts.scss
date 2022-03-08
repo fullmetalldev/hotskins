@@ -1,4 +1,4 @@
-.cartScreen{
+.cartScreen {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -9,7 +9,8 @@
   padding: 10px;
   border-top: 1px solid #ffffff;
   border-radius: 20px 20px 0 0;
-  &__arrow{
+
+  &__arrow {
     position: absolute;
     top: -100px;
     left: 50px;
@@ -22,38 +23,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    svg{
+
+    svg {
       width: 50px;
       height: 50px;
     }
   }
-  &__arrow:hover{
-    background-color: #F4C038;
-    transition: 0.3s;
 
+  &__arrow:hover {
+    background-color: #ffffff30;
+    transition: 0.3s;
   }
-  .down{
+
+  .down {
     transform: rotate(0deg);
     transition: 0.3s;
   }
+
   &__itemsRow::-webkit-scrollbar {
     width: 0;
   }
-  &__itemsRow{
+
+  &__itemsRow {
     display: flex;
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: 15px;
+    column-gap: 15px;
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 200px;
     flex-flow: wrap row;
     transition: 0.3s;
     animation: linear 0.5s cartRowStart;
-
+    height: 150px;
 
     .shopCard {
       cursor: pointer;
-      width: calc(20% - 8px);
+      width: calc(20% - 12px);
       height: 150px;
       text-align: center;
       padding: 10px 0;
@@ -69,11 +73,12 @@
         animation: linear 5s rotateImg infinite;
       }
 
-      border-radius: 10px;
+      border-radius: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      h4{
+
+      h4 {
         font-size: 14px;
       }
 
@@ -86,13 +91,13 @@
   }
 }
 
-.hide{
+.hide {
   height: 0;
   transition: 0.3s;
   animation: toHide 0.3s linear;
 }
 
-.CartHide{
+.CartHide {
   height: 0;
   border: none;
   padding: 0;
@@ -100,40 +105,38 @@
 }
 
 @keyframes hidingCart {
-  0%{
-    padding: 10px;
-    height: 200px;
+  0% {
+    height: 150px;
   }
-  100%{
-    padding: 0;
+  100% {
     height: 0;
   }
 }
 
 
 @keyframes toHide {
-  0%{
-    height: 200px;
+  0% {
+    height: 150px;
   }
-  100%{
+  100% {
     height: 0;
   }
 }
 
 @keyframes cartRowStart {
-  0%{
+  0% {
     height: 0;
   }
-  100%{
-    height: 200px;
+  100% {
+    height: 150px;
   }
 }
 
 @keyframes startCart {
-  0%{
-    bottom: -200px;
+  0% {
+    bottom: -150px;
   }
-  100%{
+  100% {
     bottom: 0;
   }
 }

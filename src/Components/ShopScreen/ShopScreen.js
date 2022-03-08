@@ -7,7 +7,7 @@ import refreshPNG from "./refresh.png";
 import CartScreen from "../CartScreen/CartScreen";
 import App from "../../App";
 
-const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
+const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
 
 
     const [search, setSearch] = useState('');
@@ -136,8 +136,8 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
                             csgoCards.filter((item) => item.name.toLowerCase() + item.gun.toLowerCase().includes(search.toLowerCase())).map((item) => (
                                 `${item.gun} ${item.name}`.toLowerCase().includes(search.toLowerCase()) ?
                                     <div style={{
-                                        border: item.checked ? "#F4C038 1px solid" : "",
-                                        backgroundColor: item.checked ? "#F4C03830" : ""
+                                        border: item.checked ? "#F4C038 3px solid" : "",
+                                        backgroundColor: item.checked ? "#F4C03810" : ""
                                     }} onClick={() => {
                                         item.checked = !item.checked;
                                         setCart(!cart.includes(item) ? [...cart, item] : [...cart.filter((el) => el !== item)])
@@ -162,9 +162,8 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
 
                 </div>
             </section>
-
             {cart.length > 0 ?
-                <CartScreen setCsgoCards={setCsgoCards} csgoCards={csgoCards} cart={cart} setCart={setCart}/> : ""}
+                <CartScreen language={language} setCsgoCards={setCsgoCards} csgoCards={csgoCards} cart={cart} setCart={setCart}/> : ""}
 
         </main>
     );
