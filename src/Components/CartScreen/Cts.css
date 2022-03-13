@@ -5,9 +5,9 @@
   width: 100vw;
   animation: linear 0.5s startCart;
   transition: 0.3s;
-  background-color: #F4C038;
+  background-color: #3D4554;
   padding: 10px;
-  border-top: 1px solid #ffffff;
+  border-top: 2px solid #ffffff;
   border-radius: 20px 20px 0 0;
 }
 .cartScreen__arrow {
@@ -50,7 +50,7 @@
   animation: linear 0.5s cartRowStart;
   height: 150px;
 }
-.cartScreen__itemsRow .shopCard {
+.cartScreen__itemsRow .cartItem {
   cursor: pointer;
   width: calc(20% - 12px);
   height: 150px;
@@ -60,23 +60,33 @@
   transition: 0.5s;
   position: relative;
   animation: ease-in-out 1s start;
-  background-color: #272E3B;
+  background-color: #20222A;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.cartScreen__itemsRow .shopCard img {
+.cartScreen__itemsRow .cartItem img {
   width: 80px;
   animation: linear 5s rotateImg infinite;
 }
-.cartScreen__itemsRow .shopCard h4 {
+.cartScreen__itemsRow .cartItem h4 {
   font-size: 14px;
 }
-.cartScreen__itemsRow .shopCard .itemPrice {
+.cartScreen__itemsRow .cartItem .itemPrice {
   font-size: 14px;
   margin-top: 5px;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+.cartScreen__itemsRow .cartItem:hover {
+  background-color: #ff000030;
+}
+.cartScreen__itemsRow .cartItem:hover:before {
+  content: "X";
+  color: red;
+  position: absolute;
+  right: 20px;
+  top: 5px;
 }
 
 .hide {

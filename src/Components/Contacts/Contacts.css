@@ -1,0 +1,87 @@
+.contacts {
+  background-color: #272e3b;
+  padding: 50px 0 290px 0;
+  min-height: calc(100vh - 121px);
+}
+.contacts__row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.contacts__mainTitle {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #FFFFFF;
+}
+.contacts__telegram {
+  display: flex;
+}
+.contacts__telegram_titles {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.contacts__telegram_titles h2 {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+}
+.contacts__telegram_titles span {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.contacts__telegram_row {
+  display: flex;
+  column-gap: 25px;
+  width: 33.3%;
+  align-items: center;
+}
+.contacts__line {
+  width: 100%;
+  height: 2px;
+  background-color: #3D4554;
+}
+.contacts__endRow {
+  display: flex;
+  column-gap: 50px;
+}
+.contacts__endRow_column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.contacts__endRow_column .left {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.contacts__endRow_column .right {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=Contacts.css.map */

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import "./shopscreen.css"
 import csgoIcon from '../../images/icons8-counter-strike-global-offensive-64.png';
-import axios from "axios";
 import searchPNG from "./search.png";
 import refreshPNG from "./refresh.png";
 import CartScreen from "../CartScreen/CartScreen";
@@ -12,14 +11,6 @@ const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
 
     const [search, setSearch] = useState('');
 
-
-    useEffect(() => {
-        if (csgoCards.length === 0){
-            axios(` http://localhost:8080/csgo`)
-                .then(({data}) => setCsgoCards(data))
-
-        }
-    }, []);
 
     const rel = () => {
         document.querySelector('.rowForItems').style.display = 'none';
@@ -136,8 +127,8 @@ const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
                             csgoCards.filter((item) => item.name.toLowerCase() + item.gun.toLowerCase().includes(search.toLowerCase())).map((item) => (
                                 `${item.gun} ${item.name}`.toLowerCase().includes(search.toLowerCase()) ?
                                     <div style={{
-                                        border: item.checked ? "#F4C038 3px solid" : "",
-                                        backgroundColor: item.checked ? "#F4C03810" : ""
+                                        border: item.checked ? "#fff 2px solid" : "",
+                                        backgroundColor: item.checked ? "#ffffff30" : ""
                                     }} onClick={() => {
                                         item.checked = !item.checked;
                                         setCart(!cart.includes(item) ? [...cart, item] : [...cart.filter((el) => el !== item)])
@@ -151,7 +142,7 @@ const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
                                               style={{display: item.checked ? "flex" : "none"}}>✔</span>
                                         <img src={item.url} alt={item.name}/>
                                         <h4>{item.gun} |<br/> {item.name}</h4>
-                                        <h4 className="itemPrice">{item.price + " сом"}</h4>
+                                        <h4 className="itemPrice">{language === "ru" ? `${item.price} сом` : `${item.price} som`}</h4>
                                     </div>
                                     : ""
                             ))

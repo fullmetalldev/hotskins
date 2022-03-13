@@ -5,9 +5,9 @@
   width: 100vw;
   animation: linear 0.5s startCart;
   transition: 0.3s;
-  background-color: #F4C038;
+  background-color: #3D4554;
   padding: 10px;
-  border-top: 1px solid #ffffff;
+  border-top: 2px solid #ffffff;
   border-radius: 20px 20px 0 0;
 
   &__arrow {
@@ -55,7 +55,7 @@
     animation: linear 0.5s cartRowStart;
     height: 150px;
 
-    .shopCard {
+    .cartItem {
       cursor: pointer;
       width: calc(20% - 12px);
       height: 150px;
@@ -65,7 +65,7 @@
       transition: 0.5s;
       position: relative;
       animation: ease-in-out 1s start;
-      background-color: #272E3B;
+      background-color: #20222A;
 
 
       img {
@@ -85,8 +85,18 @@
       .itemPrice {
         font-size: 14px;
         margin-top: 5px;
-        color: #FFFFFF;
+        color: #ffffff;
       }
+    }
+    .cartItem:hover{
+      background-color: #ff000030;
+    }
+    .cartItem:hover:before{
+      content: "X";
+      color: red;
+      position: absolute;
+      right: 20px;
+      top: 5px;
     }
   }
 }

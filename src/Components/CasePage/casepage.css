@@ -1,0 +1,73 @@
+.casePage {
+  min-height: calc(100vh - 121px);
+  background-color: #20222A;
+  user-select: none;
+}
+.casePage__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.casePage__caseImg {
+  background: url("./case.svg") center/cover no-repeat;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  user-select: none !important;
+  cursor: pointer;
+  margin-top: 100px;
+  width: 400px;
+  height: 260px;
+}
+.casePage .numbersCase {
+  font-family: "Rubik", sans-serif;
+  font-size: 28px;
+  color: #FFFFFF;
+  margin-top: 100px;
+}
+.casePage .itemFromCase {
+  margin-top: 100px;
+  cursor: pointer;
+  width: 250px;
+  height: 200px;
+  text-align: center;
+  padding: 10px 0;
+  user-select: none;
+  transition: 0.5s;
+  position: relative;
+  animation: ease-in-out 1s start;
+  justify-content: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.casePage .itemFromCase .itemName {
+  font-size: 20px;
+}
+.casePage .itemFromCase img {
+  width: 200px;
+}
+.casePage .itemFromCase .itemPrice {
+  margin-top: 10px;
+  color: #FFFFFF;
+}
+.casePage .rot {
+  animation: 0.2s ease rotateCase;
+}
+.casePage .rotRev {
+  animation: 0.2s ease rotateReverse;
+}
+
+@keyframes rotateReverse {
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+@keyframes rotateCase {
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+/*# sourceMappingURL=casepage.css.map */

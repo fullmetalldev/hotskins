@@ -1,5 +1,5 @@
 .startScreen {
-  height: 90vh;
+  min-height: calc(100vh - 121px);
   padding: 180px 0 0;
   background: url("mainBack.png") center/cover;
   position: relative;
@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  row-gap: 30px;
+  row-gap: 50px;
 }
 .startScreen__row-title {
   width: 700px;
@@ -34,6 +34,13 @@
   line-height: 20px;
   color: #20222A;
   cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+.startScreen__row-btn:hover {
+  background-color: #ffffff;
+  color: #F4C038;
+  transition: 0.8s;
 }
 
 @keyframes startScreenStart {

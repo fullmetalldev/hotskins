@@ -1,0 +1,93 @@
+.contacts {
+  background-color: #272e3b;
+  padding: 50px 0 290px 0;
+  min-height: calc(100vh - (73px + 48px));
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  &__mainTitle {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+
+  }
+
+  &__telegram{
+    display: flex;
+    &_titles{
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      h2{
+        font-family: 'Rubik', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #FFFFFF;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+      }
+      span{
+        font-family: 'Rubik', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+    }
+    &_row{
+      display: flex;
+      column-gap: 25px;
+      width: 33.3%;
+      align-items: center;
+    }
+  }
+
+  &__line{
+    width: 100%;
+    height: 2px;
+    background-color: #3D4554;
+  }
+
+  &__endRow{
+    display: flex;
+    column-gap: 50px;
+    &_column{
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      .left{
+        font-family: 'Rubik', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .right{
+        font-family: 'Rubik', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+
+      }
+    }
+  }
+
+}

@@ -1,12 +1,24 @@
 .footer {
   padding: 14px 0;
   background-color: #20222A;
+  display: flex;
+  align-items: center;
+}
+.footer ul {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer .active {
+  color: #F4C038;
+}
+.footer a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
   color: rgba(255, 255, 255, 0.5);
 }
 .footer__row {

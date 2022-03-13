@@ -6,6 +6,8 @@
   top: 0;
   z-index: 20;
 
+
+
   &__navbar {
     display: flex;
     align-items: center;
@@ -32,7 +34,7 @@
       }
     }
 
-    &_cart:hover{
+    &_cart:hover {
       background-color: #ffffff30;
       transition: 0.3s;
       padding: 5px;
@@ -61,7 +63,8 @@
         }
       }
     }
-    &-logo:hover{
+
+    &-logo:hover {
       background-color: #ffffff30;
       transition: 0.3s;
       border-radius: 20px;
@@ -73,12 +76,14 @@
       column-gap: 32px;
       animation: start ease-in-out 1s;
 
+
       &_li {
         color: #ffffff;
         font-weight: bold;
         transition: 0.3s;
       }
-      &_li:hover{
+
+      &_li:hover {
         padding: 10px;
         background-color: #ffffff30;
         border-radius: 20px;
@@ -90,8 +95,9 @@
       display: flex;
       align-items: center;
       column-gap: 10px;
+      animation: start ease-in-out 1s;
 
-      &-cartPrice{
+      &-cartPrice {
         color: #ffffff;
       }
 
@@ -103,6 +109,7 @@
         background-color: transparent;
         border: 1px solid #3D4554;
         animation: start ease-in-out 1s;
+        transition: 0.3s;
 
         img {
           width: 15px;
@@ -118,12 +125,21 @@
           color: #ffffff;
           outline: none;
           cursor: pointer;
+
         }
 
         option {
           background-color: #20222A;
           cursor: pointer;
         }
+
+
+      }
+
+      .selectLanguage:hover {
+        padding: 10px;
+        background-color: #ffffff30;
+        transition: 0.3s;
       }
     }
 

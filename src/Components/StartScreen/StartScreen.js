@@ -9,9 +9,8 @@ const StartScreen = ({language}) => {
                 <section className="startScreen__row">
 
                     <h2 className="startScreen__row-title">
-                        {language === 'ru' ? "Торговая площадка для покупки/продаж скинов по Dota 2 и CS GO" : "Trading platform for\n" +
-                            "purchases/sales of Dota 2 skins\n" +
-                            "and CS GO"}
+                        {language === 'ru' ? "Торговая площадка для покупки/продаж скинов по CS GO" : "Trading platform for\n" +
+                            "purchases/sales of CS:GO skins "}
                     </h2>
 
                     <Link to='/shop' className="startScreen__row-btn">

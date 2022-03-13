@@ -1,13 +1,25 @@
 .footer{
   padding: 14px 0;
   background-color: #20222A;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
   display: flex;
   align-items: center;
-  color: rgba(255, 255, 255, 0.5);
+  ul{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .active{
+    color: #F4C038;
+  }
+  a{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.5);
+  }
   &__row{
     display: flex;
     justify-content: space-between;

@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 import "./footer.css"
 
 const Footer = ({language}) => {
@@ -13,15 +14,15 @@ const Footer = ({language}) => {
                     </ul>
 
                     <ul className="footer__right">
-                        <li className="footer__right-li">
+                        <NavLink to="/help" className="footer__right-li">
                             {language === 'ru' ? "Помощь" : "Help"}
-                        </li>
-                        <li className="footer__right-li">
+                        </NavLink>
+                        <NavLink to="/contacts" className="footer__right-li">
                             {language === 'ru' ? "Контакты" : "Contacts"}
-                        </li>
-                        <li className="footer__right-li">
+                        </NavLink>
+                        <NavLink to="/agreement" className="footer__right-li">
                             {language === 'ru' ? "Пользвательское соглашение" : "Users agreement"}
-                        </li>
+                        </NavLink>
                     </ul>
 
                 </div>

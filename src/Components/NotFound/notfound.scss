@@ -1,6 +1,6 @@
 .notFoundPage {
   background-color: #20222A;
-  height: 90vh;
+  min-height: calc(100vh - (73px + 48px));
   padding: 180px 0 0 0;
 
   &-row {

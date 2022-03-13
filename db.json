@@ -152,6 +152,35 @@
       "price": 433,
       "checked": false,
       "id": 17
+    },
+    {
+      "name": "Jet Set",
+      "gun": "AK-47",
+      "rare": 5,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszfdDFO08iklZaOm_LwDLrawjxu5Mx2gv3--Y3nj1H6_ENkMmzwddWRdQVqZguE-lO-wunngpDttJ-bzyBn6SAi4S2LlkS0gAYMMLJosXbvAg/192x192",
+      "price": 142,
+      "checked": false,
+      "id": 18
+    },
+    {
+      "name": "Hydroponic",
+      "gun": "AK-47",
+      "rare": 1,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhh3szKcDBA49OJnpWFkPvxDLbUkmJE5fp9i_vG8MKsiwXn8xFvYTv1I4LBcgM5MFDZ-lXsyOvvhcW97pSby3s1snQlsS6LgVXp1pCH1igz/192x192",
+      "price": 1217,
+      "checked": false,
+      "id": 19
+    },
+    {
+      "name": "Vulkan",
+      "gun": "AK-47",
+      "rare": 2,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV086jloKOhcj4OrzZglRd6dd2j6eUrd-jiwfsr0BsYG6iIdeUJA8-Nw6EqVntyLrv15-4v5vOmiNr73Z2-z-DyAddTn8e/192x192",
+      "price": 934,
+      "checked": false,
+      "id": 20
     }
+
+
   ]
 }

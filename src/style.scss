@@ -4,9 +4,23 @@
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   font-style: normal;
+  transition: 0.3s;
   a{
     text-decoration: none;
   }
+}
+
+.active{
+  color: #F4C038 !important;
+  transition: 0.3s;
+  h2{
+    color: #F4C038 !important;
+    transition: 0.3s;
+  }
+}
+
+*::selection{
+  background-color: #F4C038;
 }
 
 .container{
