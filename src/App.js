@@ -31,7 +31,7 @@ function App() {
             //     .then(({data}) => setCsgoCards(data));
 
 
-            axios.get('https://api.jsonbin.io/b/622dd4920618276743756686/3', {
+            axios.get('https://api.jsonbin.io/b/622dd4920618276743756686/4', {
                 headers: {
                     "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
                 }

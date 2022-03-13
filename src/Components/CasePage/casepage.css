@@ -10,7 +10,6 @@
   flex-direction: column;
 }
 .casePage__caseImg {
-  background: url("./case.svg") center/cover no-repeat;
   -webkit-user-select: none !important;
   -moz-user-select: none !important;
   user-select: none !important;

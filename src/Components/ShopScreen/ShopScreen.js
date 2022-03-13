@@ -10,6 +10,8 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
 
     const [search, setSearch] = useState('');
 
+    const [rare, setRare] = useState([]);
+
 
     const rel = () => {
         document.querySelector('.rowForItems').style.display = 'none';
@@ -22,20 +24,22 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
         }, 300);
     };
 
+    let cards = document.querySelectorAll('.shopCard');
+
     const filterRare = (e) => {
         e.target.checked
             ? setRare([...rare, e.target.dataset.filter])
             : setRare(rare.filter((el) => el !== e.target.dataset.filter))
+
     };
 
-    const searchFunc =(e)=>{
-        setSearch(e.target.value)
+    const searchFunc = (e) => {
+        setSearch(e.target.value);
     };
 
-    const [rare, setRare] = useState([]);
-
-    let cards = document.querySelectorAll('.shopCard');
-
+    useEffect(()=>{
+        setRare([...rare])
+    }, [search]);
 
     useEffect(() => {
         if (rare.length !== 0) {
@@ -89,25 +93,25 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
                                 {language === 'ru' ? 'Редкость' : "Rare"}
                             </h2>
                             <input data-filter='legend'
-                                   onChange={(e) =>filterRare(e)}
+                                   onChange={(e) => filterRare(e)}
                                    className="shopScreen__items-checkbox legend" name="rare" type="checkbox"/>
                             <input
-                                onChange={(e) =>filterRare(e)}
+                                onChange={(e) => filterRare(e)}
                                 data-filter='megaRare'
                                 className="shopScreen__items-checkbox megaRare" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) =>filterRare(e)}
+                                onChange={(e) => filterRare(e)}
                                 data-filter='rare'
                                 className="shopScreen__items-checkbox rare" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) =>filterRare(e)}
+                                onChange={(e) => filterRare(e)}
                                 data-filter='raree'
                                 className="shopScreen__items-checkbox raree" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) =>filterRare(e)}
+                                onChange={(e) => filterRare(e)}
                                 data-filter='default'
                                 className="shopScreen__items-checkbox default" name="rare"
                                 type="checkbox"/>

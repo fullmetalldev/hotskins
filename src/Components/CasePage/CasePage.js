@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import "./casepage.css";
-import axios from "axios";
+import caseBox from "./case.svg";
 
 const CasePage = ({csgoCards, language}) => {
 
@@ -42,10 +42,9 @@ const CasePage = ({csgoCards, language}) => {
                     <h2 className="numbersCase">{language === "ru" ? `Кликните ${number} раз чтобы открыть кейс` : `Click ${number} times for open box`}</h2>
 
                     {number > 0 ?
-                        <div onClick={() => func()}
-                             className={click === "first" ? "casePage__caseImg rot" : click === "second" ? "casePage__caseImg rotRev" : "casePage__caseImg"}>
+                        <img src={caseBox} alt="case box" onClick={() => func()}
+                             className={click === "first" ? "casePage__caseImg rot" : click === "second" ? "casePage__caseImg rotRev" : "casePage__caseImg"}/>
 
-                        </div>
                         : <div
                             className={rand.rare === 1 ? "itemFromCase legend" : rand.rare === 2 ? "itemFromCase megaRare" : rand.rare === 3 ? "itemFromCase rare" : rand.rare === 4 ? "itemFromCase raree" : rand.rare === 5 ? "itemFromCase default" : ""}>
                             <img src={rand.url} alt={rand.name}/>
