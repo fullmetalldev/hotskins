@@ -18,12 +18,14 @@
   margin-top: 100px;
   width: 400px;
   height: 260px;
+  animation: linear 0.5s start;
 }
 .casePage .numbersCase {
   font-family: "Rubik", sans-serif;
   font-size: 28px;
   color: #FFFFFF;
   margin-top: 100px;
+  animation: linear 0.5s start;
 }
 .casePage .itemFromCase {
   margin-top: 100px;

@@ -4,7 +4,6 @@ import csgoIcon from '../../images/icons8-counter-strike-global-offensive-64.png
 import searchPNG from "./search.png";
 import refreshPNG from "./refresh.png";
 import CartScreen from "../CartScreen/CartScreen";
-import App from "../../App";
 
 const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
 
@@ -23,10 +22,20 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
         }, 300);
     };
 
+    const filterRare = (e) => {
+        e.target.checked
+            ? setRare([...rare, e.target.dataset.filter])
+            : setRare(rare.filter((el) => el !== e.target.dataset.filter))
+    };
+
+    const searchFunc =(e)=>{
+        setSearch(e.target.value)
+    };
 
     const [rare, setRare] = useState([]);
 
     let cards = document.querySelectorAll('.shopCard');
+
 
     useEffect(() => {
         if (rare.length !== 0) {
@@ -42,6 +51,7 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
 
 
     return (
+
         <main className="shopScreen">
             <section className="shopScreen__gameSectionBack">
                 <div className="container">
@@ -68,7 +78,7 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
                         </h2>
                         <div className="shopScreen__items-search">
                             <img src={searchPNG} alt="search icon"/>
-                            <input value={search} onChange={(e) => setSearch(e.target.value)} type="text"
+                            <input value={search} onChange={(e) => searchFunc(e)} type="text"
                                    placeholder={language === 'ru' ? "Введите название" : "Enter the name"}/>
                         </div>
                     </div>
@@ -79,40 +89,25 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
                                 {language === 'ru' ? 'Редкость' : "Rare"}
                             </h2>
                             <input data-filter='legend'
-                                   onChange={(e) =>
-                                       e.target.checked
-                                           ? setRare([...rare, e.target.dataset.filter])
-                                           : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                   onChange={(e) =>filterRare(e)}
                                    className="shopScreen__items-checkbox legend" name="rare" type="checkbox"/>
                             <input
-                                onChange={(e) =>
-                                    e.target.checked
-                                        ? setRare([...rare, e.target.dataset.filter])
-                                        : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                onChange={(e) =>filterRare(e)}
                                 data-filter='megaRare'
                                 className="shopScreen__items-checkbox megaRare" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) =>
-                                    e.target.checked
-                                        ? setRare([...rare, e.target.dataset.filter])
-                                        : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                onChange={(e) =>filterRare(e)}
                                 data-filter='rare'
                                 className="shopScreen__items-checkbox rare" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) =>
-                                    e.target.checked
-                                        ? setRare([...rare, e.target.dataset.filter])
-                                        : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                onChange={(e) =>filterRare(e)}
                                 data-filter='raree'
                                 className="shopScreen__items-checkbox raree" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) =>
-                                    e.target.checked
-                                        ? setRare([...rare, e.target.dataset.filter])
-                                        : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                onChange={(e) =>filterRare(e)}
                                 data-filter='default'
                                 className="shopScreen__items-checkbox default" name="rare"
                                 type="checkbox"/>
