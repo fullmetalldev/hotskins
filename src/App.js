@@ -27,8 +27,8 @@ function App() {
     useEffect(() => {
         if (csgoCards.length === 0) {
 
-            axios("http://localhost:8080/csgo")
-                .then(({data}) => setCsgoCards(data));
+            // axios("http://localhost:8080/csgo")
+            //     .then(({data}) => setCsgoCards(data));
 
 
             axios.get('https://api.jsonbin.io/b/622dd4920618276743756686', {
