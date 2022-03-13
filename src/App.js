@@ -27,15 +27,15 @@ function App() {
     useEffect(() => {
         if (csgoCards.length === 0) {
 
-            // axios("http://localhost:8080/csgo")
-            //     .then(({data}) => setCsgoCards(data))
+            axios("http://localhost:8080/csgo")
+                .then(({data}) => setCsgoCards(data))
 
 
-            axios.get('https://api.jsonbin.io/b/622dd4920618276743756686', {
-                headers: {
-                    "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
-                }
-            }).then(({data}) => setCsgoCards(data.csgo));
+            // axios.get('https://api.jsonbin.io/b/622dd4920618276743756686', {
+            //     headers: {
+            //         "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
+            //     }
+            // }).then(({data}) => setCsgoCards(data.csgo));
 
         }
     }, []);

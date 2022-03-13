@@ -6,7 +6,7 @@ import refreshPNG from "./refresh.png";
 import CartScreen from "../CartScreen/CartScreen";
 import App from "../../App";
 
-const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
+const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
 
 
     const [search, setSearch] = useState('');
@@ -24,7 +24,7 @@ const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
     };
 
 
-    const [rare, setRare] = useState("");
+    const [rare, setRare] = useState([]);
 
     let cards = document.querySelectorAll('.shopCard');
 
@@ -79,25 +79,40 @@ const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
                                 {language === 'ru' ? 'Редкость' : "Rare"}
                             </h2>
                             <input data-filter='legend'
-                                   onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                   onChange={(e) =>
+                                       e.target.checked
+                                           ? setRare([...rare, e.target.dataset.filter])
+                                           : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
                                    className="shopScreen__items-checkbox legend" name="rare" type="checkbox"/>
                             <input
-                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                onChange={(e) =>
+                                    e.target.checked
+                                        ? setRare([...rare, e.target.dataset.filter])
+                                        : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
                                 data-filter='megaRare'
                                 className="shopScreen__items-checkbox megaRare" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                onChange={(e) =>
+                                    e.target.checked
+                                        ? setRare([...rare, e.target.dataset.filter])
+                                        : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
                                 data-filter='rare'
                                 className="shopScreen__items-checkbox rare" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                onChange={(e) =>
+                                    e.target.checked
+                                        ? setRare([...rare, e.target.dataset.filter])
+                                        : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
                                 data-filter='raree'
                                 className="shopScreen__items-checkbox raree" name="rare"
                                 type="checkbox"/>
                             <input
-                                onChange={(e) => e.target.checked ? setRare([...rare, e.target.dataset.filter]) : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
+                                onChange={(e) =>
+                                    e.target.checked
+                                        ? setRare([...rare, e.target.dataset.filter])
+                                        : setRare(rare.filter((el) => el !== e.target.dataset.filter))}
                                 data-filter='default'
                                 className="shopScreen__items-checkbox default" name="rare"
                                 type="checkbox"/>
@@ -128,7 +143,7 @@ const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
                                 `${item.gun} ${item.name}`.toLowerCase().includes(search.toLowerCase()) ?
                                     <div style={{
                                         border: item.checked ? "#fff 2px solid" : "",
-                                        backgroundColor: item.checked ? "#ffffff30" : ""
+                                        backgroundColor: item.checked ? "#ffffff30" : "",
                                     }} onClick={() => {
                                         item.checked = !item.checked;
                                         setCart(!cart.includes(item) ? [...cart, item] : [...cart.filter((el) => el !== item)])
@@ -142,7 +157,7 @@ const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
                                               style={{display: item.checked ? "flex" : "none"}}>✔</span>
                                         <img src={item.url} alt={item.name}/>
                                         <h4>{item.gun} |<br/> {item.name}</h4>
-                                        <h4 className="itemPrice">{language === "ru" ? `${item.price} сом` : `${item.price} som`}</h4>
+                                        <h4 className="itemPrice">{language === "ru" ? `${item.price} сом` : `${(item.price / 106).toFixed(2)} $`}</h4>
                                     </div>
                                     : ""
                             ))
@@ -154,7 +169,8 @@ const ShopScreen = ({ setCsgoCards, csgoCards, language, cart, setCart}) => {
                 </div>
             </section>
             {cart.length > 0 ?
-                <CartScreen language={language} setCsgoCards={setCsgoCards} csgoCards={csgoCards} cart={cart} setCart={setCart}/> : ""}
+                <CartScreen language={language} setCsgoCards={setCsgoCards} csgoCards={csgoCards} cart={cart}
+                            setCart={setCart}/> : ""}
 
         </main>
     );

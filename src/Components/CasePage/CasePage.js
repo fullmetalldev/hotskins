@@ -37,6 +37,8 @@ const CasePage = ({csgoCards, language}) => {
 
                 <div className="casePage__row">
 
+                    <h2 className="numbersCase">100% Скидка на случайный скин</h2>
+
                     <h2 className="numbersCase">{language === "ru" ? `Кликните ${number} раз чтобы открыть кейс` : `Click ${number} times for open box`}</h2>
 
                     {number > 0 ?

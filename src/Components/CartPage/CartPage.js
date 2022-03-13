@@ -28,7 +28,7 @@ const CartPage = ({cart, allSum, language, setCart}) => {
                         <h2>
                             {language === "ru"
                                 ? `Общая сумма: ${allSum} сом`
-                                : `All price: ${allSum} som`
+                                : `All price: ${(allSum / 106).toFixed(2)}$`
                             }
                         </h2>
 
@@ -65,7 +65,7 @@ const CartPage = ({cart, allSum, language, setCart}) => {
                                              }>
                                             <img src={item.url} alt={item.name}/>
                                             <h4>{item.gun} |<br/> {item.name}</h4>
-                                            <h4 className="itemPrice">{language === "ru" ? `${item.price} сом` : `${item.price} som`}</h4>
+                                            <h4 className="itemPrice">{language === "ru" ? `${item.price} сом` : `${(item.price / 106).toFixed(2)} $`}</h4>
                                         </div>
                                         : ""
                                 ))

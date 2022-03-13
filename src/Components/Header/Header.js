@@ -56,7 +56,7 @@ const Header = ({allSum, cart, language, setLanguage}) => {
                             <img src={cartIMG} alt="cartimg"/>
 
                             <span className="header__navbar-left-cartPrice">
-                                {allSum} {language === "ru" ? "Сом" : "Som"}
+                                {language === "ru" ? `${allSum} Сом` : `${(allSum / 106).toFixed(2)}$`}
                             </span>
 
                         </NavLink>

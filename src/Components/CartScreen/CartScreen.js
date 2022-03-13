@@ -34,7 +34,7 @@ const CartScreen = ({language, csgoCards, cart, setCart}) => {
                              className={item.rare === 1 ? "cartItem legend" : item.rare === 2 ? "cartItem megaRare" : item.rare === 3 ? "cartItem rare" : item.rare === 4 ? "cartItem raree" : item.rare === 5 ? "cartItem default" : ""}>
                             <img src={item.url} alt={item.name}/>
                             <h4>{item.gun} |<br/> {item.name}</h4>
-                            <h4 className="itemPrice">{language === "ru" ? `${item.price} сом` : `${item.price} som`}</h4>
+                            <h4 className="itemPrice">{language === "ru" ? `${item.price} сом` : `${(item.price / 106).toFixed(2)} $`}</h4>
                         </div>
                     )}
 
