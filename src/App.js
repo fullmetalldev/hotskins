@@ -32,7 +32,7 @@ function App() {
 
 
             axios.get('https://api.jsonbin.io/b/622dd4920618276743756686/3', {
-                settings: {
+                headers: {
                     "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
                 }
             }).then(({data}) => setCsgoCards(data.csgo));
