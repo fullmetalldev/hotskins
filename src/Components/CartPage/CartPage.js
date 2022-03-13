@@ -54,7 +54,7 @@ const CartPage = ({cart, allSum, language, setCart}) => {
                                         <div style={{
                                             border: item.checked ? "#fff 2px solid" : "",
                                             backgroundColor: item.checked ? "#ffffff30" : ""
-                                        }} onClick={() => {
+                                        }} onDoubleClick={() => {
                                             item.checked = !item.checked;
                                             setCart(!cart.includes(item) ? [...cart, item] : [...cart.filter((el) => el !== item)])
                                         }}
