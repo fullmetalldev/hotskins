@@ -10,6 +10,7 @@ import CartPage from "./Components/CartPage/CartPage";
 import Contacts from "./Components/Contacts/Contacts";
 import CasePage from "./Components/CasePage/CasePage";
 import axios from "axios";
+import Preloader from "./Components/preloader/preloader";
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
     const [language, setLanguage] = useState('ru');
     const [cart, setCart] = useState([]);
     const [csgoCards, setCsgoCards] = useState([]);
+
+    const [preload, setPreload] = useState(true);
+    const [bye, setBye] = useState(false);
 
     let allSum = 0;
 
@@ -37,11 +41,21 @@ function App() {
                 }
             }).then(({data}) => setCsgoCards(data.csgo));
 
+
         }
+
+        setInterval(()=>{
+            setBye(true)
+        }, 3000);
+        setInterval(()=>{
+            setPreload(false)
+        }, 4000)
+
     }, []);
 
     return (
         <div className="App">
+            {preload ? <Preloader bye={bye}/> : ""}
             <Header allSum={allSum} cart={cart} language={language} setLanguage={setLanguage}/>
             <Routes>
                 <Route path="/" element={<StartScreen language={language}/>}/>

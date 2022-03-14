@@ -262,11 +262,11 @@
       "id": 29
     },
     {
-      "name": "Oni Taiji",
-      "gun": "AWP",
+      "name": "Dragonfire",
+      "gun": "SSG 08",
       "rare": 3,
-      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PLfYQJK7dK4jYG0m_7zO6_ummpD78A_juqZoomljgW1rhY9MTz1d4fGegI-N1qB8wS5xOi61JS6vcifwCZruz5iuyh5fuIHYA/192x192",
-      "price": 478,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f0Ob3Yi5FvISJkJKKkPj6NbLDk1RC68phj9bN_Iv9nGu4qgE7Nnf3LISddw5taAzQ8lm6xOq9gZTpuZ6fyXA3syIltHffnxbkhxEYOLZtm7XAHgXm-xFt/192x192",
+      "price": 512,
       "checked": false,
       "id": 30
     },
@@ -469,11 +469,11 @@
       "id": 52
     },
     {
-      "name": "Oni Taiji",
-      "gun": "AWP",
-      "rare": 3,
-      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PLfYQJK7dK4jYG0m_7zO6_ummpD78A_juqZoomljgW1rhY9MTz1d4fGegI-N1qB8wS5xOi61JS6vcifwCZruz5iuyh5fuIHYA/192x192",
-      "price": 478,
+      "name": "Bone Pile",
+      "gun": "UMP-45",
+      "rare": 4,
+      "url": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwOP3YjZX4NCJkImKkOX1PoTThGpH5_p9g-7J4bP5iUazrl06YDulIYCWJABrYVrX_ge7xO3ogsO46sjJzXBhsyAn4HfbzhbjgBEecKUx0mY3Obru/192x192",
+      "price": 278,
       "checked": false,
       "id": 53
     },
