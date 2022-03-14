@@ -41,15 +41,22 @@ function App() {
                 }
             }).then(({data}) => setCsgoCards(data.csgo));
 
-
         }
+
+
 
         setInterval(()=>{
             setBye(true)
-        }, 3000);
+        }, 7000);
+
+
+
         setInterval(()=>{
             setPreload(false)
-        }, 4000)
+        }, 8000)
+
+
+
 
     }, []);
 
