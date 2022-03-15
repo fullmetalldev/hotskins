@@ -12,16 +12,17 @@ const Header = ({allSum, cart, language, setLanguage}) => {
         setLanguage(localStorage.getItem('language'));
     }, []);
 
+
     const setLang = (e) => {
         setLanguage(e.target.value);
         localStorage.setItem('language', e.target.value);
     };
 
-
     return (
         <header className="header">
             <div className="container">
                 <nav className="header__navbar">
+
 
                     <div className="header__navbar-right">
 
