@@ -11,6 +11,8 @@ import Contacts from "./Components/Contacts/Contacts";
 import CasePage from "./Components/CasePage/CasePage";
 import axios from "axios";
 import Preloader from "./Components/preloader/preloader";
+import Login from "./Components/LoginForm/Login";
+import UserInfo from "./Components/UserInfo/UserInfo";
 
 
 function App() {
@@ -22,52 +24,95 @@ function App() {
     const [preload, setPreload] = useState(true);
     const [bye, setBye] = useState(false);
 
+
+    const [log, setLog] = useState("neutral");
+
+    const [user, setUser] = useState("");
+
     let allSum = 0;
 
     cart.reduce((acc, rec) => {
         return allSum = (acc += rec.price)
     }, 0);
 
+
     useEffect(() => {
+
         if (csgoCards.length === 0) {
+            axios("http://localhost:8080/csgo")
+                .then(({data}) => setCsgoCards(data));
 
-            // axios("http://localhost:8080/csgo")
-            //     .then(({data}) => setCsgoCards(data));
-
-
-            axios.get('https://api.jsonbin.io/b/622dd4920618276743756686/4', {
-                headers: {
-                    "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
-                }
-            }).then(({data}) => setCsgoCards(data.csgo));
+            // axios.get('https://api.jsonbin.io/b/622dd4920618276743756686/4', {
+            //     headers: {
+            //         "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
+            //     }
+            // }).then(({data}) => setCsgoCards(data.csgo));
 
         }
 
+        if (localStorage.getItem("userName") !== "") {
+            if (localStorage.getItem("userPas") !== "") {
+                axios("http://localhost:8080/users")
+                    .then(({data}) => data.forEach((item) => {
+                        if (item.login === localStorage.getItem("userName")) {
+                            if (item.password === localStorage.getItem("userPas")) {
+                                setUser(item);
+                            }
+                        }
+                    }))
+            }
+        }
 
 
-        setInterval(()=>{
+        setInterval(() => {
             setBye(true)
         }, 7000);
 
 
-
-        setInterval(()=>{
+        setInterval(() => {
             setPreload(false)
-        }, 8000)
-
-
+        }, 8000);
 
 
     }, []);
 
+    useEffect(() => {
+        if (user !== "") {
+            axios(`http://localhost:8080/users`)
+                .then(({data}) => {
+                    data.forEach((item) => {
+                        if (item.login === user.login) {
+                            if (item.password === user.password) {
+                                axios.put(`http://localhost:8080/users/${item.id}`, {
+                                    "login": item.login,
+                                    "password": item.password,
+                                    "cart": [...cart],
+                                    "img": item.img,
+                                });
+                            }
+                        }
+
+                    });
+
+                })
+
+        }
+    }, [cart]);
+
     return (
         <div className="App">
+            {log === "opened" ?
+                <Login cart={cart} setCart={setCart} log={log} user={user} setLog={setLog} setUser={setUser}
+                       language={language}/> : ""}
             {preload ? <Preloader bye={bye}/> : ""}
-            <Header allSum={allSum} cart={cart} language={language} setLanguage={setLanguage}/>
+            <Header user={user} setLog={setLog} allSum={allSum} cart={cart} language={language}
+                    setUser={setUser} setLanguage={setLanguage}/>
             <Routes>
+                <Route path="/user" element={<UserInfo language={language} user={user} setUser={setUser}/>}/>
                 <Route path="/" element={<StartScreen language={language}/>}/>
-                <Route path="/shop" element={<ShopScreen csgoCards={csgoCards} setCsgoCards={setCsgoCards} cart={cart}
-                                                         setCart={setCart} language={language}/>}/>
+                <Route user={user} path="/shop"
+                       element={<ShopScreen csgoCards={csgoCards} setCsgoCards={setCsgoCards} cart={cart}
+                                            setCart={setCart} language={language}/>}/>
                 <Route path="/*" element={<NotFound language={language}/>}/>
                 <Route path="/cart"
                        element={<CartPage setCart={setCart} cart={cart} allSum={allSum} language={language}/>}/>

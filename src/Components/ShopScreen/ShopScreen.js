@@ -5,7 +5,7 @@ import searchPNG from "./search.png";
 import refreshPNG from "./refresh.png";
 import CartScreen from "../CartScreen/CartScreen";
 
-const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
+const ShopScreen = ({user, setCsgoCards, csgoCards, language, cart, setCart}) => {
 
 
     const [search, setSearch] = useState('');
@@ -33,11 +33,12 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
 
     };
 
+
     const searchFunc = (e) => {
         setSearch(e.target.value);
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         setRare([...rare])
     }, [search]);
 
@@ -52,7 +53,6 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
             })
         }
     }, [rare]);
-
 
     return (
 
@@ -143,7 +143,7 @@ const ShopScreen = ({setCsgoCards, csgoCards, language, cart, setCart}) => {
                                     <div style={{
                                         border: item.checked ? "#fff 2px solid" : "",
                                         backgroundColor: item.checked ? "#ffffff30" : "",
-                                    }} onClick={() => {
+                                    }} onClick={(e) => {
                                         item.checked = !item.checked;
                                         setCart(!cart.includes(item) ? [...cart, item] : [...cart.filter((el) => el !== item)])
                                     }}

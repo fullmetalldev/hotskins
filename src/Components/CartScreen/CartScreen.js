@@ -24,8 +24,8 @@ const CartScreen = ({language, csgoCards, cart, setCart}) => {
 
                     {cart.map((item) =>
                         <div style={{border: "2px solid #fff"}} onClick={() => {
+                            item.checked = !item.checked;
                             setCart(cart.filter((el) => item.id !== el.id));
-                            (csgoCards.map((element) => element.id === item.id ? element.checked = !element.checked : ""));
                             localStorage.setItem("cards", csgoCards);
                             localStorage.setItem("carts", cart)
                         }}

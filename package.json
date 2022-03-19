@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^13.2.1",
     "axios": "^0.25.0",
     "concurrently": "^7.0.0",
+    "express": "^4.17.3",
+    "json": "^11.0.0",
     "json-server": "^0.17.0",
     "react": "^17.0.2",
     "react-audio-player": "^0.17.0",

@@ -495,5 +495,15 @@
       "checked": false,
       "id": 55
     }
+  ],
+  "users": [
+    {
+      "login": "erbol",
+      "password": "erbol",
+      "cart": [],
+      "id": 1,
+      "date": "17:11 / 06-02-2022",
+      "img": "https://konplan.com/wp-content/uploads/2021/07/avatar-mann_shutterstock_518740741-scaled-e1627298799822.jpg"
+    }
   ]
 }

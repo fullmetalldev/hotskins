@@ -1,0 +1,108 @@
+.UserPage {
+  background: #272e3b;
+  padding: 30px 0;
+  min-height: calc(100vh - 121px);
+  font-family: "Rubik", sans-serif;
+}
+.UserPage__usernameInfo {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.UserPage__userPasswordInfo {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.UserPage__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+}
+.UserPage__dateInfo {
+  display: flex;
+  column-gap: 15px;
+}
+.UserPage__row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
+  font-size: 22px !important;
+}
+.UserPage__row_top {
+  display: flex;
+  column-gap: 15px;
+  width: 100%;
+  color: #FFFFFF;
+}
+.UserPage__row_left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.UserPage__row_right {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 5px 0;
+}
+.UserPage__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.UserPage__btn {
+  padding: 10px 20px;
+  background: #F4C038;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.UserPage__btn:hover {
+  background: #FFFFFF;
+  color: #F4C038;
+}
+
+.deleteAccForm {
+  width: 100vw;
+  height: 100vh;
+  background: #00000099;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  animation: 0.3s start linear;
+}
+.deleteAccForm__title {
+  font-size: 22px;
+  color: #FFFFFF;
+  animation: 0.8s start linear;
+}
+.deleteAccForm__buttons {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+.deleteAccForm__buttons .button {
+  padding: 10px 30px;
+  background: #F4C038;
+  font-size: 18px;
+  color: #FFFFFF;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  animation: 0.8s start linear;
+}
+.deleteAccForm__buttons .button:hover {
+  background: #910001;
+}
+
+/*# sourceMappingURL=user.css.map */

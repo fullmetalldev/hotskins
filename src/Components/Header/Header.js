@@ -1,12 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import "./header.css";
 import icon from "../../images/icon/favicon.png";
 import ruIcon from "../../images/language/Russia.png";
 import engIcon from "../../images/language/English.png";
-import {NavLink, useHref} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import cartIMG from "./imgs/Shopping_Cart_02.png";
+import anonymous from "./imgs/User_02.svg"
 
-const Header = ({allSum, cart, language, setLanguage}) => {
+const Header = ({setUser, user, setLog, allSum, cart, language, setLanguage}) => {
 
     useEffect(() => {
         setLanguage(localStorage.getItem('language'));
@@ -69,6 +70,14 @@ const Header = ({allSum, cart, language, setLanguage}) => {
                                 <option className="selectLanguage__optionENG" value="eng">Eng</option>
                             </select>
                         </div>
+
+                        <div className="useracc">
+                            <img onClick={() => setLog("opened")} src={anonymous} alt="anon"/>
+                            {user.length === 0
+                                ? ""
+                                : <NavLink to="/user" className="header__navbar-left_username">{user.login}</NavLink>}
+                        </div>
+
                     </div>
                 </nav>
             </div>

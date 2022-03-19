@@ -14,24 +14,34 @@ const Contacts = ({language}) => {
 
                     <div className="contacts__telegram">
 
-                        <a  target="_blank" href="https:/t.me/hotskins" className="contacts__telegram_row">
+                        <a target="_blank" href="https:/t.me/hotskins" className="contacts__telegram_row">
 
                             <img src={tg} alt="telegram icon"/>
 
                             <div className="contacts__telegram_titles">
                                 <h2>@hotskins</h2>
-                                <span>Технические анонсы и новости</span>
+                                <span>
+                                    {language === "ru"
+                                        ? "Технические анонсы и новости"
+                                        : "For news and announcements"
+                                    }
+                                    </span>
                             </div>
 
                         </a>
 
-                        <a  target="_blank" href="https:/t.me/hotskinshelp" className="contacts__telegram_row">
+                        <a target="_blank" href="https:/t.me/hotskinshelp" className="contacts__telegram_row">
 
                             <img src={tg} alt="telegram icon"/>
 
                             <div className="contacts__telegram_titles">
                                 <h2>@hotskins-help</h2>
-                                <span>Поддержка пользователей сервиса</span>
+                                <span>
+                                    {language === "ru"
+                                        ? "Поддержка пользователей сервиса"
+                                        : "Support for service users"
+                                    }
+                                    </span>
                             </div>
 
                         </a>
@@ -42,7 +52,12 @@ const Contacts = ({language}) => {
 
                             <div className="contacts__telegram_titles">
                                 <h2>hello@hotskins.ru</h2>
-                                <span>Для любых ваших вопросов</span>
+                                <span>
+                                      {language === "ru"
+                                          ? "Для любых ваших вопросов"
+                                          : "For all your questions"
+                                      }
+                                   </span>
                             </div>
 
                         </a>

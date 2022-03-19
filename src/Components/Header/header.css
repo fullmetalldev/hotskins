@@ -6,6 +6,12 @@
   top: 0;
   z-index: 20;
 }
+.header .useracc {
+  color: #FFFFFF;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  align-items: center;
+}
 .header__navbar {
   display: flex;
   align-items: center;
@@ -53,6 +59,19 @@
 }
 .header__navbar-logo h2 span {
   font-weight: lighter;
+}
+.header__navbar .useracc {
+  display: flex;
+  column-gap: 5px;
+}
+.header__navbar .useracc img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.header__navbar .useracc .header__navbar-left_username {
+  font-size: 16px;
+  color: #ffffff;
 }
 .header__navbar-logo:hover {
   background-color: #ffffff30;
