@@ -3,7 +3,7 @@ import axios from "axios";
 import "./loginform.css";
 
 
-const Login = ({setLog, language, setUser}) => {
+const Login = ({csgoCards, setLog, language, setUser}) => {
 
     const [loginInp, setLoginInp] = useState("");
     const [passInp, setPassInp] = useState("");

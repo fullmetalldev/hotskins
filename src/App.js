@@ -87,7 +87,8 @@ function App() {
                                     "login": item.login,
                                     "password": item.password,
                                     "cart": [...cart],
-                                    "img": item.img,
+                                    "date": item.date,
+                                    "img": item.img
                                 });
                             }
                         }
@@ -102,7 +103,7 @@ function App() {
     return (
         <div className="App">
             {log === "opened" ?
-                <Login cart={cart} setCart={setCart} log={log} user={user} setLog={setLog} setUser={setUser}
+                <Login csgoCards={csgoCards} cart={cart} setCart={setCart} log={log} user={user} setLog={setLog} setUser={setUser}
                        language={language}/> : ""}
             {preload ? <Preloader bye={bye}/> : ""}
             <Header user={user} setLog={setLog} allSum={allSum} cart={cart} language={language}

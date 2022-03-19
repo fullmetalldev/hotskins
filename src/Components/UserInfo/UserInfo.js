@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import "./user.css";
 import axios from "axios";
+import edit from "./edit.svg";
 
 const UserInfo = ({user, setUser, language}) => {
 
@@ -69,6 +70,7 @@ const UserInfo = ({user, setUser, language}) => {
                                 <div className="UserPage__username">
                                     {user.login}
                                 </div>
+                                <img className="UserPage__editBtn" src={edit} alt="edit icon"/>
                             </div>
 
 

@@ -93,16 +93,19 @@
   left: 0;
   z-index: 30;
   animation: 0.3s start linear;
-  &__title{
+
+  &__title {
     font-size: 22px;
     color: #FFFFFF;
     animation: 0.8s start linear;
   }
-  &__buttons{
+
+  &__buttons {
     display: flex;
     column-gap: 30px;
     align-items: center;
-    .button{
+
+    .button {
       padding: 10px 30px;
       background: #F4C038;
       font-size: 18px;
@@ -112,7 +115,8 @@
       cursor: pointer;
       animation: 0.8s start linear;
     }
-    .button:hover{
+
+    .button:hover {
       background: #910001;
     }
   }
