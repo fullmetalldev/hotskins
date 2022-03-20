@@ -86,5 +86,19 @@
     top: 0;
   }
 }
+@media (max-width: 768px) {
+  .Login__screen_close {
+    right: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .Login__screen_close {
+    right: 20px;
+  }
+
+  .Login__screen .Login__form {
+    padding: 0 10px;
+  }
+}
 
 /*# sourceMappingURL=loginform.css.map */

@@ -24,9 +24,18 @@
   display: flex;
   column-gap: 10px;
   width: 100%;
-  color: #FFFFFF;
   font-weight: bolder;
   border-radius: 20px;
+}
+.burgerMenu .useracc a {
+  color: #FFFFFF;
+}
+.burgerMenu .useracc__log {
+  border: none;
+  border-radius: 15px;
+  background-color: #F4C038;
+  color: #FFFFFF;
+  padding: 5px 30px;
 }
 .burgerMenu .useracc:hover {
   transition: 0.3s;

@@ -9,12 +9,17 @@ const BurgerMenu = ({allSum, cart, user, setLog, language}) => {
         <div className="burgerMenu">
 
 
-            <NavLink to="/user" className="useracc">
+            <div className="useracc">
                 <img onClick={() => setLog("opened")} src={anonymous} alt="anon"/>
                 {user.length === 0
-                    ? ""
-                    : <span className="header__navbar-left_username">{user.login}</span>}
-            </NavLink>
+                    ? <button onClick={() => setLog("opened")} className="useracc__log">
+                        {language === "ru"
+                            ? "Вход"
+                            : "Login"
+                        }
+                    </button>
+                    : <NavLink to="/user" className="header__navbar-left_username">{user.login}</NavLink>}
+            </div>
 
             <span className="hr">
 
