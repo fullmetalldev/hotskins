@@ -1,0 +1,50 @@
+@media (max-width: 1100px) {
+  .header__navbar-right {
+    column-gap: 80px;
+  }
+  .header {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__navbar-ul {
+    display: none;
+  }
+  .header__navbar .useracc {
+    display: none;
+  }
+  .header__navbar_cart {
+    display: none;
+  }
+
+  .burgerButton {
+    position: relative;
+    width: 50px;
+    row-gap: 5px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      transition: 0.5s;
+      width: 25px;
+    }
+  }
+
+  .burgerButton-active {
+    .burgerButton__up {
+      position: absolute;
+      transition: 0.5s;
+      transform: rotate(40deg);
+    }
+    .burgerButton__down {
+      position: absolute;
+      transition: 0.5s;
+      transform: rotate(-40deg);
+    }
+  }
+
+}

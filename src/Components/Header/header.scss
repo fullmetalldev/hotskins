@@ -5,6 +5,9 @@
   position: sticky;
   top: 0;
   z-index: 20;
+  .burgerButton{
+    display: none;
+  }
   .useracc{
     color: #FFFFFF;
     font-family: "Rubik", sans-serif;

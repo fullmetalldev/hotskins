@@ -4,6 +4,16 @@
   min-height: calc(100vh - 121px);
   font-family: "Rubik", sans-serif;
 }
+.UserPage .UserPage__editBtn {
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.UserPage .UserPage__editBtn:hover {
+  transition: 0.5s;
+  background-color: #F4C038;
+}
 .UserPage__usernameInfo {
   display: flex;
   align-items: center;
@@ -103,6 +113,112 @@
 }
 .deleteAccForm__buttons .button:hover {
   background: #910001;
+}
+
+.changeUserSettings {
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  padding: 10px 0;
+}
+.changeUserSettings h2 {
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+.changeUserSettings input {
+  outline: none;
+  width: 220px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: none;
+  padding: 5px 15px;
+  color: #000000;
+}
+.changeUserSettings input:focus {
+  background-color: #f4d575;
+}
+.changeUserSettings input::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+}
+.changeUserSettings__btnsRow {
+  display: flex;
+  column-gap: 30px;
+}
+.changeUserSettings__btnsRow .confirmBtn {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #F4C038;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+}
+.changeUserSettings__btnsRow .confirmBtn:hover {
+  background-color: #910001;
+  transition: 0.3s;
+}
+
+.searchAccounts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.searchAccounts__input {
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+  width: 250px;
+  border: none;
+  font-size: 18px;
+  color: #000000;
+}
+.searchAccounts__input:focus {
+  background-color: #f4d95f;
+  color: #FFFFFF;
+}
+.searchAccounts__inputAndImage {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.searchAccounts__inputAndImage_title {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.searchAccounts__inputAndImage_img {
+  width: 15px;
+  height: 15px;
+}
+.searchAccounts__accountsDiv {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  max-height: 400px;
+}
+.searchAccounts__accountsDiv_userCard {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
+}
+.searchAccounts__accountsDiv_userCard img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+.searchAccounts__accountsDiv_userCard span {
+  color: #FFFFFF;
+}
+.searchAccounts__accountsDiv_userCard h4 {
+  color: #FFFFFF;
+}
+.searchAccounts__accountsDiv_userCard:hover {
+  background-color: #F4C038;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=user.css.map */

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import "./cartPage.css";
 import cartIcon from "./Shopping_Cart_01.svg";
 import searchIcon from "./search.png";
+import "./cartPageAdaptive.css";
 
 
 const CartPage = ({cart, allSum, language, setCart}) => {

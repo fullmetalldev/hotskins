@@ -1,0 +1,81 @@
+@media (max-width: 1100px) {
+  .shopScreen__gameSectionBack {
+    padding: 30px 10px;
+  }
+
+  .shopScreen__items {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .itemsSection {
+    padding: 30px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .rowForItems .shopCard {
+    width: 150px;
+    height: 140px;
+  }
+  .rowForItems .shopCard img {
+    width: 40%;
+  }
+  .rowForItems .shopCard h4 {
+    font-size: 14px;
+  }
+
+  .shopScreen__games-title {
+    font-size: 30px;
+  }
+
+  .shopScreen__gameSectionBack {
+    padding: 20px 10px;
+  }
+
+  .shopScreen__games-select {
+    margin-top: 10px;
+    padding: 0 5px;
+  }
+  .shopScreen__games-select img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .shopScreen__items-search {
+    width: 190px;
+  }
+  .shopScreen__items-search input {
+    width: 100%;
+  }
+
+  .shopScreen__items-title {
+    font-size: 28px;
+  }
+
+  .shopScreen__items-searchAndTitle {
+    padding: 30px 0;
+  }
+}
+@media (max-width: 425px) {
+  .shopScreen__items-searchAndTitle {
+    padding: 10px 0;
+  }
+
+  .rowForItems {
+    padding: 0;
+  }
+
+  .shopScreen__items-searchAndTitle {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+
+  .shopScreen__items-rareOfItems {
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-end;
+  }
+}
+
+/*# sourceMappingURL=shopscreenAdaptive.css.map */

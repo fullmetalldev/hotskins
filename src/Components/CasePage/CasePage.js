@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import "./casepage.css";
 import caseBox from "./case.svg";
+import "./casePageAdaptive.css";
 
 const CasePage = ({csgoCards, language}) => {
 
@@ -37,7 +38,11 @@ const CasePage = ({csgoCards, language}) => {
 
                 <div className="casePage__row">
 
-                    <h2 className="numbersCase">100% Скидка на случайный скин</h2>
+                    <h2 className="numbersCase">{
+                        language === "ru"
+                        ? "100% Скидка на случайный скин"
+                            : "100% Discount for random skin"
+                    }</h2>
 
                     <h2 className="numbersCase">{language === "ru" ? `Кликните ${number} раз чтобы открыть кейс` : `Click ${number} times for open box`}</h2>
 

@@ -1,0 +1,53 @@
+@media (max-width: 1100px) {
+  .startScreen {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .startScreen {
+    min-height: calc(100vh - 141px);
+  }
+}
+@media (max-width: 768px) {
+  .startScreen {
+    padding: 140px 30px 0 30px;
+  }
+
+  .startScreen__row-title {
+    width: auto;
+    font-size: 48px;
+    line-height: normal;
+  }
+
+  .startScreen__row {
+    row-gap: 20px;
+  }
+
+  .startScreen__row-btn {
+    color: #ffffff;
+    font-size: 14px;
+    padding: 20px 30px;
+  }
+}
+@media (max-width: 425px) {
+  .startScreen__row {
+    row-gap: 15px;
+  }
+
+  .startScreen {
+    padding: 150px 20px;
+  }
+
+  .startScreen__row-title {
+    font-size: 36px;
+    line-height: normal;
+  }
+}
+@media (max-width: 425px) {
+  .startScreen {
+    min-height: calc(100vh - 181px);
+  }
+}
+
+/*# sourceMappingURL=StartScreenAdaptive.css.map */

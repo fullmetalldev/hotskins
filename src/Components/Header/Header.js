@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./header.css";
 import icon from "../../images/icon/favicon.png";
 import ruIcon from "../../images/language/Russia.png";
@@ -6,6 +6,9 @@ import engIcon from "../../images/language/English.png";
 import {NavLink} from "react-router-dom";
 import cartIMG from "./imgs/Shopping_Cart_02.png";
 import anonymous from "./imgs/User_02.svg"
+import "./HeaderAdaptive.css";
+import burgerLine from "./imgs/lineburger.svg";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = ({setUser, user, setLog, allSum, cart, language, setLanguage}) => {
 
@@ -13,6 +16,7 @@ const Header = ({setUser, user, setLog, allSum, cart, language, setLanguage}) =>
         setLanguage(localStorage.getItem('language'));
     }, []);
 
+    const [burger, setBurger] = useState(false);
 
     const setLang = (e) => {
         setLanguage(e.target.value);
@@ -78,9 +82,22 @@ const Header = ({setUser, user, setLog, allSum, cart, language, setLanguage}) =>
                                 : <NavLink to="/user" className="header__navbar-left_username">{user.login}</NavLink>}
                         </div>
 
+                        <div onClick={() => {
+                            setBurger(!burger)
+                        }} className={burger ? "burgerButton burgerButton-active" : "burgerButton"}>
+                            <img className="burgerButton__up" src={burgerLine} alt=""/>
+                            <img className="burgerButton__down" src={burgerLine} alt=""/>
+                        </div>
+
                     </div>
                 </nav>
             </div>
+
+            {burger
+                ? <BurgerMenu allSum={allSum} cart={cart} language={language} setLog={setLog} user={user}/>
+                : ""
+            }
+
         </header>
     );
 };

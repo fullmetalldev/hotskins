@@ -1,0 +1,44 @@
+@media (max-width: 1100px) {
+  .contacts {
+    padding: 50px 0 0 0;
+  }
+
+  .contacts__telegram_row {
+    width: 340px;
+  }
+
+  .contacts__telegram {
+    justify-content: space-between;
+    row-gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .contacts__row {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 768px) {
+  .contacts__mainTitle {
+    font-size: 36px;
+  }
+
+  .contacts {
+    padding: 10px 0 0 0;
+  }
+}
+@media (max-width: 550px) {
+  .contacts__row {
+    row-gap: 20px;
+  }
+
+  .contacts {
+    min-height: calc(100vh - 141px);
+  }
+}
+@media (max-width: 425px) {
+  .contacts {
+    min-height: calc(100vh - 181px);
+  }
+}
+
+/*# sourceMappingURL=contactsAdaptive.css.map */

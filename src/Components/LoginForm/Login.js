@@ -66,8 +66,8 @@ const Login = ({csgoCards, setLog, language, setUser}) => {
 
         let registerDate = new Date();
 
-        let day = registerDate.getDay();
-        let month = registerDate.getMonth();
+        let day = registerDate.getDate();
+        let month = registerDate.getUTCMonth()+1;
         let year = registerDate.getFullYear();
         let minutes = registerDate.getMinutes();
         let hours = registerDate.getHours();
@@ -75,6 +75,7 @@ const Login = ({csgoCards, setLog, language, setUser}) => {
         if (day <= 9) {
             day = "0" + day
         }
+
         if (minutes <= 9) {
             minutes = "0" + minutes
         }
@@ -104,6 +105,14 @@ const Login = ({csgoCards, setLog, language, setUser}) => {
                         "id": data.length + 1,
                         "date": `${hours}:${minutes} / ${day}-${month}-${year}`,
                         "img": "https://konplan.com/wp-content/uploads/2021/07/avatar-mann_shutterstock_518740741-scaled-e1627298799822.jpg"
+                    });
+                    setUser({
+                        login: login,
+                        password: pass,
+                        img: "https://konplan.com/wp-content/uploads/2021/07/avatar-mann_shutterstock_518740741-scaled-e1627298799822.jpg",
+                        date: `${hours}:${minutes} / ${day}-${month}-${year}`,
+                        cart: [],
+                        id: data.length + 1
                     });
                     setLog("logged");
                     if (language === "ru") {

@@ -76,29 +76,29 @@ function App() {
 
     }, []);
 
-    useEffect(() => {
-        if (user !== "") {
-            axios(`http://localhost:8080/users`)
-                .then(({data}) => {
-                    data.forEach((item) => {
-                        if (item.login === user.login) {
-                            if (item.password === user.password) {
-                                axios.put(`http://localhost:8080/users/${item.id}`, {
-                                    "login": item.login,
-                                    "password": item.password,
-                                    "cart": [...cart],
-                                    "date": item.date,
-                                    "img": item.img
-                                });
-                            }
-                        }
-
-                    });
-
-                })
-
-        }
-    }, [cart]);
+    // useEffect(() => {
+    //     if (user !== "") {
+    //         axios(`http://localhost:8080/users`)
+    //             .then(({data}) => {
+    //                 data.forEach((item) => {
+    //                     if (item.login === user.login) {
+    //                         if (item.password === user.password) {
+    //                             axios.put(`http://localhost:8080/users/${item.id}`, {
+    //                                 "login": item.login,
+    //                                 "password": item.password,
+    //                                 "cart": [...cart],
+    //                                 "date": item.date,
+    //                                 "img": item.img
+    //                             });
+    //                         }
+    //                     }
+    //
+    //                 });
+    //
+    //             })
+    //
+    //     }
+    // }, [cart]);
 
     return (
         <div className="App">

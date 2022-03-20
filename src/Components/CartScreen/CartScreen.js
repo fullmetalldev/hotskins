@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "./Cts.css"
+import "./cartScreenAdaptive.css";
 
 const CartScreen = ({language, csgoCards, cart, setCart}) => {
 

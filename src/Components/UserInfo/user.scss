@@ -4,6 +4,21 @@
   min-height: calc(100vh - (73px + 48px));
   font-family: "Rubik", sans-serif;
 
+  .UserPage__editBtn {
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 10px;
+    transition: 0.5s;
+
+
+  }
+
+  .UserPage__editBtn:hover {
+    transition: 0.5s;
+    background-color: #F4C038;
+
+  }
+
   &__usernameInfo {
     display: flex;
     align-items: center;
@@ -122,3 +137,129 @@
   }
 }
 
+.changeUserSettings {
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  padding: 10px 0;
+
+  h2 {
+    color: #FFFFFF;
+    margin-bottom: 5px;
+  }
+
+  input {
+    outline: none;
+    width: 220px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: none;
+    padding: 5px 15px;
+    color: #000000;
+  }
+
+  input:focus {
+    background-color: #f4d575;
+  }
+
+  input::placeholder {
+    font-family: "Rubik", sans-serif;
+    font-size: 12px;
+  }
+
+  &__btnsRow {
+    display: flex;
+    column-gap: 30px;
+
+    .confirmBtn {
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: #F4C038;
+      padding: 5px 15px;
+      border-radius: 10px;
+      border: none;
+      color: #FFFFFF;
+    }
+
+    .confirmBtn:hover {
+      background-color: #910001;
+      transition: 0.3s;
+    }
+  }
+}
+
+.searchAccounts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  &__input {
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    width: 250px;
+    border: none;
+
+    font-size: 18px;
+    color: #000000;
+  }
+
+  &__input:focus {
+    background-color: #f4d95f;
+    color: #FFFFFF;
+
+  }
+
+  &__inputAndImage {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &_title {
+      font-size: 18px;
+      color: #FFFFFF;
+    }
+
+    &_img {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
+  &__accountsDiv {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-height: 400px;
+
+    &_userCard {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      transition: 0.5s;
+      cursor: pointer;
+      border-radius: 10px;
+      padding: 5px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+      }
+
+      span {
+        color: #FFFFFF;
+      }
+
+      h4 {
+        color: #FFFFFF;
+      }
+    }
+
+    &_userCard:hover {
+      background-color: #F4C038;
+      transition: 0.5s;
+    }
+  }
+}

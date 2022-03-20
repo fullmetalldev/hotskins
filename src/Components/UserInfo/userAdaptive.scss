@@ -1,0 +1,42 @@
+@media (max-width: 1100px) {
+  .UserPage{
+    padding: 30px 10px;
+  }
+}
+@media (max-width: 550px) {
+  .searchAccounts__inputAndImage_title{
+    font-size: 16px;
+  }
+  .UserPage{
+    min-height: calc(100vh - (73px + 68px));
+  }
+  .UserPage__avatar{
+    width: 80px;
+    height: 80px;
+  }
+  .UserPage__row_top{
+    span{
+      font-size: 16px;
+    }
+    div{
+      font-size: 16px;
+    }
+  }
+  .changeUserSettings{
+    h2{
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .UserPage{
+    padding: 20px 10px;
+    min-height: calc(100vh - (73px + 108px));
+  }
+  .UserPage__row_top{
+    flex-direction: column;
+  }
+  .UserPage__btn{
+    font-size: 12px;
+  }
+}

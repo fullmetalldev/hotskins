@@ -1,0 +1,52 @@
+@media (max-width: 768px) {
+  .casePage {
+    padding: 0 10px;
+  }
+
+  .casePage .numbersCase {
+    font-size: 26px;
+  }
+
+  .casePage .numbersCase {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 550px) {
+  .casePage {
+    min-height: calc(100vh - 141px);
+  }
+
+  .casePage .numbersCase {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .casePage__caseImg {
+    width: 300px;
+    height: auto;
+  }
+}
+@media (max-width: 425px) {
+  .casePage .numbersCase {
+    font-size: 16px;
+  }
+
+  .casePage .numbersCase {
+    margin-top: 80px;
+  }
+
+  .casePage__caseImg {
+    margin-top: 60px;
+  }
+
+  .casePage {
+    min-height: calc(100vh - 181px);
+  }
+
+  .casePage__caseImg {
+    width: 250px;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=casePageAdaptive.css.map */

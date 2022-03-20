@@ -4,6 +4,7 @@ import csgoIcon from '../../images/icons8-counter-strike-global-offensive-64.png
 import searchPNG from "./search.png";
 import refreshPNG from "./refresh.png";
 import CartScreen from "../CartScreen/CartScreen";
+import "./shopscreenAdaptive.css";
 
 const ShopScreen = ({user, setCsgoCards, csgoCards, language, cart, setCart}) => {
 

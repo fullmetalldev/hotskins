@@ -1,6 +1,7 @@
 import React from 'react';
 import "./startscreen.css";
 import {Link} from "react-router-dom";
+import "./StartScreenAdaptive.css"
 
 const StartScreen = ({language}) => {
     return (

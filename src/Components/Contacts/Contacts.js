@@ -2,6 +2,7 @@ import React from 'react';
 import "./Contacts.css";
 import tg from "./tg.svg"
 import em from "./email.svg"
+import "./contactsAdaptive.css"
 
 const Contacts = ({language}) => {
     return (
