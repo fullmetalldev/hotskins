@@ -4,9 +4,19 @@ import anonymous from "../Header/imgs/User_02.svg";
 import {NavLink} from "react-router-dom";
 import cartIMG from "../Header/imgs/Shopping_Cart_02.png";
 
-const BurgerMenu = ({allSum, cart, user, setLog, language}) => {
+const BurgerMenu = ({burger, allSum, cart, user, setLog, language}) => {
+
+    let burgerrr = document.querySelector(".burgerMenu");
+
+    if (!burger) {
+        setTimeout(()=>{
+            burgerrr.classList.add("remove")
+        }, 490);
+
+    }
+
     return (
-        <div className="burgerMenu">
+        <div className={burger ? "burgerMenu" : "burgerMenu burgerMenuExit"}>
 
 
             <div className="useracc">

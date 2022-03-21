@@ -93,10 +93,7 @@ const Header = ({setUser, user, setLog, allSum, cart, language, setLanguage}) =>
                 </nav>
             </div>
 
-            {burger
-                ? <BurgerMenu allSum={allSum} cart={cart} language={language} setLog={setLog} user={user}/>
-                : ""
-            }
+            <BurgerMenu burger={burger} allSum={allSum} cart={cart} language={language} setLog={setLog} user={user}/>
 
         </header>
     );
