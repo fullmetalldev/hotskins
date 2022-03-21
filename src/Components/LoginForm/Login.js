@@ -19,10 +19,50 @@ const Login = ({csgoCards, setLog, language, setUser}) => {
             return elem.login === login
         }
 
-        axios("http://localhost:8080/users")
+        // axios("http://localhost:8080/users")
+        //     .then(({data}) => {
+        //         if (data.some(checkIs)) {
+        //             data.forEach((item) => {
+        //                 if (item.login === login) {
+        //                     if (item.password === pass) {
+        //                         setUser({
+        //                             login: item.login,
+        //                             password: item.password,
+        //                             img: item.img,
+        //                             date: item.date,
+        //                             cart: [],
+        //                             id: item.id
+        //                         });
+        //                         localStorage.setItem("userName", item.login);
+        //                         localStorage.setItem("userPas", item.password);
+        //                         setLog("logged");
+        //                     } else {
+        //                         language === "ru"
+        //                             ? alert("Вы ввели не правильный пароль!")
+        //                             : alert("Wrong password!")
+        //                     }
+        //
+        //                 }
+        //
+        //             })
+        //
+        //         } else {
+        //             language === "ru"
+        //                 ? alert("Логин не найден!")
+        //                 : alert("Login isn't found!")
+        //
+        //         }
+        //
+        //     })
+
+        axios("https://api.jsonbin.io/b/622dd4920618276743756686/4", {
+            headers: {
+                "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
+            }
+        })
             .then(({data}) => {
-                if (data.some(checkIs)) {
-                    data.forEach((item) => {
+                if (data.users.some(checkIs)) {
+                    data.users.forEach((item) => {
                         if (item.login === login) {
                             if (item.password === pass) {
                                 setUser({
@@ -53,7 +93,7 @@ const Login = ({csgoCards, setLog, language, setUser}) => {
 
                 }
 
-            });
+            })
 
 
     };
@@ -67,7 +107,7 @@ const Login = ({csgoCards, setLog, language, setUser}) => {
         let registerDate = new Date();
 
         let day = registerDate.getDate();
-        let month = registerDate.getUTCMonth()+1;
+        let month = registerDate.getUTCMonth() + 1;
         let year = registerDate.getFullYear();
         let minutes = registerDate.getMinutes();
         let hours = registerDate.getHours();

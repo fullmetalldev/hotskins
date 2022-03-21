@@ -51,10 +51,27 @@ function App() {
 
         }
 
+        // if (localStorage.getItem("userName") !== "") {
+        //     if (localStorage.getItem("userPas") !== "") {
+        //         axios("http://localhost:8080/users")
+        //             .then(({data}) => data.forEach((item) => {
+        //                 if (item.login === localStorage.getItem("userName")) {
+        //                     if (item.password === localStorage.getItem("userPas")) {
+        //                         setUser(item);
+        //                     }
+        //                 }
+        //             }))
+        //     }
+        // }
+
         if (localStorage.getItem("userName") !== "") {
             if (localStorage.getItem("userPas") !== "") {
-                axios("http://localhost:8080/users")
-                    .then(({data}) => data.forEach((item) => {
+                axios("https://api.jsonbin.io/b/622dd4920618276743756686/4", {
+                    headers: {
+                        "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
+                    }
+                })
+                    .then(({data}) => data.users.forEach((item) => {
                         if (item.login === localStorage.getItem("userName")) {
                             if (item.password === localStorage.getItem("userPas")) {
                                 setUser(item);
@@ -104,7 +121,8 @@ function App() {
     return (
         <div className="App">
             {log === "opened" ?
-                <Login csgoCards={csgoCards} cart={cart} setCart={setCart} log={log} user={user} setLog={setLog} setUser={setUser}
+                <Login csgoCards={csgoCards} cart={cart} setCart={setCart} log={log} user={user} setLog={setLog}
+                       setUser={setUser}
                        language={language}/> : ""}
             {preload ? <Preloader bye={bye}/> : ""}
             <Header user={user} setLog={setLog} allSum={allSum} cart={cart} language={language}
