@@ -3,7 +3,7 @@
   top: 73px;
   left: 0;
   width: 100%;
-  animation: startBurgerMenu 0.5s linear;
+  animation: startBurgerMenu 0.3s linear;
   z-index: -1;
   background: #20222A;
   min-height: 50vh;
@@ -56,7 +56,7 @@
 }
 
 .burgerMenuExit {
-  animation: endBurgerMenu 0.5s linear;
+  animation: endBurgerMenu 0.3s linear;
 }
 
 @keyframes startBurgerMenu {
