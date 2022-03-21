@@ -33,12 +33,13 @@ const UserInfo = ({user, setUser, language}) => {
         // }, []);
 
         useEffect(() => {
-            axios("https://api.jsonbin.io/b/622dd4920618276743756686", {
+            axios("https://api.jsonbin.io/b/622dd4920618276743756686/4", {
                 headers: {
                     "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
                 }
             })
                 .then(({data}) => setUsersData(data.users));
+            console.log(usersData)
         }, []);
 
 

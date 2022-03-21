@@ -231,7 +231,8 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    max-height: 400px;
+    max-height: 300px;
+    overflow-y: scroll;
 
     &_userCard {
       display: flex;
@@ -241,6 +242,7 @@
       cursor: pointer;
       border-radius: 10px;
       padding: 5px;
+      margin-right: 10px;
 
       img {
         width: 50px;
@@ -260,6 +262,16 @@
     &_userCard:hover {
       background-color: #F4C038;
       transition: 0.5s;
+
     }
+  }
+  &__accountsDiv::-webkit-scrollbar{
+    width: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  &__accountsDiv::-webkit-scrollbar-thumb{
+    background-color: #F4C038;
+    border-radius: 10px;
   }
 }

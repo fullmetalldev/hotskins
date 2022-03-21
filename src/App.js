@@ -86,12 +86,12 @@ function App() {
 
         setInterval(() => {
             setBye(true)
-        }, 7000);
+        }, 4000);
 
 
         setInterval(() => {
             setPreload(false)
-        }, 8000);
+        }, 5000);
 
 
     }, []);

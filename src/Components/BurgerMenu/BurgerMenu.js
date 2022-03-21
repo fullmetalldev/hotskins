@@ -11,7 +11,7 @@ const BurgerMenu = ({burger, allSum, cart, user, setLog, language}) => {
     if (!burger) {
         setTimeout(()=>{
             burgerrr.classList.add("remove")
-        }, 290);
+        }, 190);
 
     }
 
