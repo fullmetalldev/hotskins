@@ -55,6 +55,8 @@ const Login = ({csgoCards, setLog, language, setUser}) => {
         //
         //     })
 
+        // Online Json server version request
+
         axios("https://api.jsonbin.io/b/622dd4920618276743756686/4", {
             headers: {
                 "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."

@@ -64,6 +64,8 @@ function App() {
         //     }
         // }
 
+        // Online json server version
+
         if (localStorage.getItem("userName") !== "") {
             if (localStorage.getItem("userPas") !== "") {
                 axios("https://api.jsonbin.io/b/622dd4920618276743756686/4", {
