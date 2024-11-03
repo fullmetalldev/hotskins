@@ -5,15 +5,18 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  .burgerButton{
+
+  .burgerButton {
     display: none;
   }
-  .useracc{
+
+  .useracc {
     color: #FFFFFF;
     font-family: "Rubik", sans-serif;
-    display: flex;
+    display: none !important;
     align-items: center;
   }
+
   &__navbar {
     display: flex;
     align-items: center;
@@ -70,15 +73,17 @@
       }
     }
 
-    .useracc{
-      display: flex;
+    .useracc {
+      display: none !important;
       column-gap: 5px;
-      img{
+
+      img {
         width: 20px;
         height: 20px;
         cursor: pointer;
       }
-      .header__navbar-left_username{
+
+      .header__navbar-left_username {
         font-size: 16px;
         color: #ffffff;
       }

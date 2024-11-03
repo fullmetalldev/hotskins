@@ -9,17 +9,17 @@ import ShopScreen from "./Components/ShopScreen/ShopScreen";
 import CartPage from "./Components/CartPage/CartPage";
 import Contacts from "./Components/Contacts/Contacts";
 import CasePage from "./Components/CasePage/CasePage";
-import axios from "axios";
 import Preloader from "./Components/preloader/preloader";
 import Login from "./Components/LoginForm/Login";
 import UserInfo from "./Components/UserInfo/UserInfo";
+import listSkins from './db.json'
 
 
 function App() {
 
     const [language, setLanguage] = useState('ru');
     const [cart, setCart] = useState([]);
-    const [csgoCards, setCsgoCards] = useState([]);
+    const [csgoCards, setCsgoCards] = useState(listSkins.csgo);
 
     const [preload, setPreload] = useState(true);
     const [bye, setBye] = useState(false);
@@ -38,18 +38,18 @@ function App() {
 
     useEffect(() => {
 
-        if (csgoCards.length === 0) {
-
-            // axios("http://localhost:8080/csgo")
-            //     .then(({data}) => setCsgoCards(data));
-
-            axios.get('https://api.jsonbin.io/b/622dd4920618276743756686/4', {
-                headers: {
-                    "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
-                }
-            }).then(({data}) => setCsgoCards(data.csgo));
-
-        }
+        // if (csgoCards.length === 0) {
+        //
+        //     // axios("http://localhost:8080/csgo")
+        //     //     .then(({data}) => setCsgoCards(data));
+        //
+        //     // axios.get('https://api.jsonbin.io/b/622dd4920618276743756686/4', {
+        //     //     headers: {
+        //     //         "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
+        //     //     }
+        //     // }).then(({data}) => setCsgoCards(data.csgo));
+        //
+        // }
 
         // if (localStorage.getItem("userName") !== "") {
         //     if (localStorage.getItem("userPas") !== "") {
@@ -66,22 +66,22 @@ function App() {
 
         // Online json server version
 
-        if (localStorage.getItem("userName") !== "") {
-            if (localStorage.getItem("userPas") !== "") {
-                axios("https://api.jsonbin.io/b/622dd4920618276743756686/4", {
-                    headers: {
-                        "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
-                    }
-                })
-                    .then(({data}) => data.users.forEach((item) => {
-                        if (item.login === localStorage.getItem("userName")) {
-                            if (item.password === localStorage.getItem("userPas")) {
-                                setUser(item);
-                            }
-                        }
-                    }))
-            }
-        }
+        // if (localStorage.getItem("userName") !== "") {
+        //     if (localStorage.getItem("userPas") !== "") {
+        //         axios("https://api.jsonbin.io/b/622dd4920618276743756686/4", {
+        //             headers: {
+        //                 "secret-key": "$2b$10$FZuYL8gwJW/Fr2C3mPfx2ewVtvWizZa92QbNKBI6TuxuYDmU0Qt6."
+        //             }
+        //         })
+        //             .then(({data}) => data.users.forEach((item) => {
+        //                 if (item.login === localStorage.getItem("userName")) {
+        //                     if (item.password === localStorage.getItem("userPas")) {
+        //                         setUser(item);
+        //                     }
+        //                 }
+        //             }))
+        //     }
+        // }
 
 
         setInterval(() => {

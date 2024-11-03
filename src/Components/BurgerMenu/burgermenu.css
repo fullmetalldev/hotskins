@@ -21,7 +21,7 @@
   display: inline-block;
 }
 .burgerMenu .useracc {
-  display: flex;
+  display: none;
   column-gap: 10px;
   width: 100%;
   font-weight: bolder;

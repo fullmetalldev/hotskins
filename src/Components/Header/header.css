@@ -12,7 +12,7 @@
 .header .useracc {
   color: #FFFFFF;
   font-family: "Rubik", sans-serif;
-  display: flex;
+  display: none;
   align-items: center;
 }
 .header__navbar {
@@ -64,7 +64,7 @@
   font-weight: lighter;
 }
 .header__navbar .useracc {
-  display: flex;
+  display: none;
   column-gap: 5px;
 }
 .header__navbar .useracc img {
